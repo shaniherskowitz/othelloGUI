@@ -60,5 +60,4 @@ public class BoardGUI extends GridPane {
 
     }
 
-
 }
