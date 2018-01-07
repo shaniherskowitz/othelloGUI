@@ -1,5 +1,7 @@
 package othelloGame;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -61,7 +63,7 @@ public class ConsoleUI implements GameUI {
             System.out.println("It's a tie!!!");
             return;
         }
-        System.out.println("othelloGame.Player " + board.getWinnerSymbol() + " is the winner!!!");
+        System.out.println("Player " + board.getWinnerSymbol() + " is the winner!!!");
         //cout << "Your score is: " << board.getXTiles();// not sure is needed bc score will be only full board.
 
     }
@@ -103,6 +105,23 @@ public class ConsoleUI implements GameUI {
 
     public void played(Point p, char player) {
         System.out.println(player + " played: (" + (p.getX() + 1) + "," + (p.getY() + 1) + ")");
+    }
+
+    public Move getUserInput() {
+        userInput();
+        int i = 0, j = 0;
+        String point = null;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            point = reader.readLine();
+            i = Character.getNumericValue(point.charAt(0));
+            j = Character.getNumericValue(point.charAt(2));
+        } catch (Exception e) {
+        }
+        //print.problemWithInput(); check for problem
+
+
+        return new Move(new Point(i - 1, j - 1));
     }
 
 }

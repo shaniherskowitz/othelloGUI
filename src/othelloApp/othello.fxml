@@ -9,7 +9,7 @@
 <HBox xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="othelloApp.OthelloController" fx:id="root" spacing="10">
     <VBox spacing="10">
-        <Button>Start Game</Button>
+        <Button text="Start Game" onAction="#startGame"/>
         <Button>End Game</Button>
     </VBox>
 </HBox>

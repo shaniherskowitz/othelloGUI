@@ -1,11 +1,8 @@
-package othelloApp;
+package othelloApp.GUI;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import othelloGame.Board;
 import othelloGame.Tile;
@@ -19,7 +16,7 @@ public class BoardGUI extends GridPane {
 
     public BoardGUI(Board board) {
         this.board = board;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("board.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -58,6 +55,9 @@ public class BoardGUI extends GridPane {
             }
         }
 
+    }
+    public void updateBoard(Board board) {
+        this.board = board;
     }
 
 }

@@ -1,4 +1,4 @@
-package othelloApp;
+package othelloApp.GUI;
 
 
 import javafx.scene.layout.GridPane;

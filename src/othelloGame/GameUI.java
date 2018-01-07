@@ -46,4 +46,7 @@ public interface GameUI {
      */
     void played(Point p, char player);
 
+
+    Move getUserInput();
+
 }

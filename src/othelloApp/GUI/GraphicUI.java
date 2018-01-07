@@ -1,27 +1,28 @@
-package othelloApp;
+package othelloApp.GUI;
 
 
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
+import othelloApp.GUI.BoardGUI;
 import othelloGame.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class GraphicUI implements GameUI {
-    private GridPane root;
+
     private BoardGUI board;
 
-    GraphicUI(GridPane root, BoardGUI board) {
-        this.root = root;
+    public GraphicUI(BoardGUI board) {
         this.board = board;
+
     }
 
     public void printBoard(Board board2) {
-        BoardGUI board1 = new BoardGUI(board2);
+        board.updateBoard(board2);
         board.setPrefWidth(400);
         board.setPrefHeight(400);
-        root.add(board,0 , 0);
         //root.getChildren().add(0, board1);
         board.draw();
 
@@ -58,6 +59,24 @@ public class GraphicUI implements GameUI {
     }
 
     public void played(Point p, char player) {
+
+    }
+
+    public  Move getUserInput() {
+        userInput();
+        int i = 0, j = 0;
+        String point = null;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            point = reader.readLine();
+            i = Character.getNumericValue(point.charAt(0));
+            j = Character.getNumericValue(point.charAt(2));
+        } catch (Exception e) {
+        }
+        //print.problemWithInput(); check for problem
+
+
+        return new Move(new Point(i - 1, j - 1));
 
     }
 }
