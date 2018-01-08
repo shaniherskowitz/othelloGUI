@@ -1,6 +1,8 @@
 package othelloApp.GUI;
 
 
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import othelloApp.GUI.BoardGUI;
@@ -41,7 +43,7 @@ public class GraphicUI implements GameUI {
 
     public void printMoves(char symbol, List<Move> movesList) {
         for (int i = 0; i < movesList.size(); i++) {
-            javafx.scene.shape.Rectangle rect = new javafx.scene.shape.Rectangle(50, 50, Color.rgb(0, 0, 0));
+            javafx.scene.shape.Rectangle rect = new javafx.scene.shape.Rectangle(50, 50, Color.rgb(160, 40, 79));
             rect.setX(movesList.get(i).getPoint().getX());
             rect.setY(movesList.get(i).getPoint().getY());
             board.add(rect, movesList.get(i).getPoint().getX(), movesList.get(i).getPoint().getY());
@@ -62,21 +64,29 @@ public class GraphicUI implements GameUI {
 
     }
 
-    public  Move getUserInput() {
-        userInput();
+    public Move getUserInput() {
         int i = 0, j = 0;
-        String point = null;
+        board.addEventHandler(MouseEvent.MOUSE_CLICKED,
+                event -> {
+                    System.out.println(event.hashCode());
+                }
+        );
+        userInput();
+
+        /*String point = null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             point = reader.readLine();
             i = Character.getNumericValue(point.charAt(0));
             j = Character.getNumericValue(point.charAt(2));
         } catch (Exception e) {
-        }
+        }*/
         //print.problemWithInput(); check for problem
 
 
         return new Move(new Point(i - 1, j - 1));
 
     }
+
+
 }
