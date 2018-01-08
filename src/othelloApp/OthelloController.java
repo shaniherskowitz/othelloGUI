@@ -41,27 +41,21 @@ public class OthelloController implements Initializable {
 
     @FXML
     protected void startGame() {
-        Player player1 = new HumanPlayer(Tile.X);
-        Player player2 = new HumanPlayer(Tile.O);
-        GraphicUI print = new GraphicUI(board);
-        //List<Move> list = new ArrayList<>();
-        //list.add(new Move(new Point(2,2), 2));
-        //g.printBoard(new Board(8));
-        //g.printMoves('X', list);
-        //game.run();
+
         GameLogic logic = new RegularGameLogic();
         Board board1 = new Board(8);
         boolean turn = true;
         GameStatus gameStatus = GameStatus.IN_PROGRESS;
         GameStatus player1TurnStatus = GameStatus.NOT_STARTED, player2TurnStatus = GameStatus.NOT_STARTED;
 
-        if(turn) {
+        /*if(turn) {
             player1TurnStatus = logic.turn(player1, board1, print);
-        } else player2TurnStatus = logic.turn(player2, board1, print);
+        } else player2TurnStatus = logic.turn(player2, board1, print);*/
 
-
-
-
+        GameLogic gl = new RegularGameLogic();
+        List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
+        GraphicUI graphicUI = new GraphicUI(board);
+        graphicUI.printMoves('O', movesList);
 
 
     }

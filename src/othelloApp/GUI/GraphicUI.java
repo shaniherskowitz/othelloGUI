@@ -26,7 +26,7 @@ public class GraphicUI implements GameUI {
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         //root.getChildren().add(0, board1);
-        board.draw();
+
 
 
     }
@@ -47,8 +47,8 @@ public class GraphicUI implements GameUI {
             rect.setX(movesList.get(i).getPoint().getX());
             rect.setY(movesList.get(i).getPoint().getY());
             board.add(rect, movesList.get(i).getPoint().getX(), movesList.get(i).getPoint().getY());
-            board.draw();
         }
+
     }
 
 

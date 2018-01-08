@@ -38,8 +38,10 @@ public class BoardGUI extends GridPane {
         int cellHeight = height / board.getSize();
         int cellWidth = width / board.getBoard()[0].length;
 
-        PlayerGUI player1 = new PlayerGUI(this, cellWidth, cellHeight,Color.rgb(255, 163, 224));
-        PlayerGUI player2 = new PlayerGUI(this, cellWidth, cellHeight,Color.rgb(206, 70, 160));
+        PlayerGUI player1 = new PlayerGUI(this, cellWidth, cellHeight,
+                Color.rgb(255, 163, 224), Tile.X, this);
+        PlayerGUI player2 = new PlayerGUI(this, cellWidth, cellHeight,
+                Color.rgb(206, 70, 160), Tile.O, this);
 
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
@@ -61,5 +63,7 @@ public class BoardGUI extends GridPane {
     public void updateBoard(Board board) {
         this.board = board;
     }
+
+    public Board getBoard() {return this.board;}
 
 }
