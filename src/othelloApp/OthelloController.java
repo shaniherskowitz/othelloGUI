@@ -22,10 +22,6 @@ public class OthelloController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.board = new BoardGUI(new Board(8));
-        /*GameGUI game = new GameGUI(board);
-        game.setPrefWidth(400);
-        game.setPrefHeight(400);
-        root.getChildren().add(0, game);*/
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
@@ -62,7 +58,7 @@ public class OthelloController implements Initializable {
         if(turn) {
             player1TurnStatus = logic.turn(player1, board1, print);
         } else player2TurnStatus = logic.turn(player2, board1, print);
-        board.draw();
+
 
 
 

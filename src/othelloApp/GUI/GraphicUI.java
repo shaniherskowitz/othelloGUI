@@ -47,6 +47,7 @@ public class GraphicUI implements GameUI {
             rect.setX(movesList.get(i).getPoint().getX());
             rect.setY(movesList.get(i).getPoint().getY());
             board.add(rect, movesList.get(i).getPoint().getX(), movesList.get(i).getPoint().getY());
+            board.draw();
         }
     }
 
@@ -66,21 +67,21 @@ public class GraphicUI implements GameUI {
 
     public Move getUserInput() {
         int i = 0, j = 0;
-        board.addEventHandler(MouseEvent.MOUSE_CLICKED,
+        /*board.addEventHandler(MouseEvent.MOUSE_CLICKED,
                 event -> {
                     System.out.println(event.hashCode());
                 }
-        );
+        );*/
         userInput();
 
-        /*String point = null;
+        String point = null;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             point = reader.readLine();
             i = Character.getNumericValue(point.charAt(0));
             j = Character.getNumericValue(point.charAt(2));
         } catch (Exception e) {
-        }*/
+        }
         //print.problemWithInput(); check for problem
 
 
