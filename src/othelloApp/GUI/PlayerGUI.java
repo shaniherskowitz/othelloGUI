@@ -1,9 +1,10 @@
-package othelloApp;
+package othelloApp.GUI;
 
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import othelloGame.Point;
 
 public class PlayerGUI {
     private GridPane grid;
@@ -25,4 +26,5 @@ public class PlayerGUI {
         grid.getChildren().remove(circle);
         grid.add(circle, col, row);
     }
+
 }

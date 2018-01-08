@@ -4,7 +4,7 @@ public class Move {
     private Point move;
     private int scoreCounter;
 
-    Move(Point move) {
+    public Move(Point move) {
         this.move = move;
         this.scoreCounter = 0;
     }
@@ -14,7 +14,7 @@ public class Move {
         this.scoreCounter = 0;
     }
 
-    Move(Point move, int counter) {
+    public Move(Point move, int counter) {
         this.move = new Point(move.getX(), move.getY());
         this.scoreCounter = counter;
     }
@@ -27,7 +27,7 @@ public class Move {
         return scoreCounter;
     }
 
-    Point getPoint() {
+    public Point getPoint() {
         return move;
     }
 

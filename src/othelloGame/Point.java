@@ -15,11 +15,11 @@ public class Point {
         y = -1;
     }
 
-    int getX() {
+    public int getX() {
         return this.x;
     }
 
-    int getY() {
+    public int getY() {
         return this.y;
     }
 
