@@ -65,4 +65,8 @@ public class OthelloController implements Initializable {
     protected void endGame() {
         exit(1);
     }
+    @FXML
+    protected void settings() {
+
+    }
 }

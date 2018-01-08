@@ -1,0 +1,9 @@
+.button {
+ -fx-text-fill: white;
+ -fx-font-weight: bold;
+ -fx-background-color: linear-gradient(rgb(122, 0, 69), pink);
+}
+
+.root {
+-fx-background-color: linear-gradient(pink,rgb(122, 0, 69));
+}
