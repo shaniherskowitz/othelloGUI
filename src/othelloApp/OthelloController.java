@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static java.lang.System.exit;
+
 public class OthelloController implements Initializable {
     private BoardGUI board;
     @FXML
@@ -58,5 +60,9 @@ public class OthelloController implements Initializable {
         graphicUI.printMoves('O', movesList);
 
 
+    }
+    @FXML
+    protected void endGame() {
+        exit(1);
     }
 }

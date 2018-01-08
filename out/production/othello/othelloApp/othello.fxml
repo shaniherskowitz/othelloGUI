@@ -10,7 +10,7 @@
       fx:controller="othelloApp.OthelloController" fx:id="root" spacing="10">
     <VBox spacing="10">
         <Button text="Start Game" onAction="#startGame"/>
-        <Button>End Game</Button>
+        <Button text="End Game" onAction="#endGame"/>
     </VBox>
 </HBox>
 
