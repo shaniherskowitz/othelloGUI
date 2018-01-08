@@ -32,7 +32,8 @@ public class BoardGUI extends GridPane {
         this.getChildren().clear();
 
         int height = (int) this.getPrefHeight();
-        int width = (int) this.getPrefWidth();
+        //int width = (int) this.getPrefWidth();
+        int width = (int) this.getPrefHeight();
 
         int cellHeight = height / board.getSize();
         int cellWidth = width / board.getBoard()[0].length;
