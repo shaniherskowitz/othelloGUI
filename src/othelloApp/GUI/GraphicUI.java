@@ -23,8 +23,10 @@ public class GraphicUI implements GameUI {
 
     public void printBoard(Board board2) {
         board.updateBoard(board2);
-        board.setPrefWidth(400);
-        board.setPrefHeight(400);
+        board.reload();
+        //board.setPrefWidth(400);
+        //board.setPrefHeight(400);
+        board.draw();
         //root.getChildren().add(0, board1);
 
 
@@ -66,27 +68,8 @@ public class GraphicUI implements GameUI {
     }
 
     public Move getUserInput() {
-        int i = 0, j = 0;
-        /*board.addEventHandler(MouseEvent.MOUSE_CLICKED,
-                event -> {
-                    System.out.println(event.hashCode());
-                }
-        );*/
-        userInput();
-
-        String point = null;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
-            point = reader.readLine();
-            i = Character.getNumericValue(point.charAt(0));
-            j = Character.getNumericValue(point.charAt(2));
-        } catch (Exception e) {
-        }
-        //print.problemWithInput(); check for problem
-
-
-        return new Move(new Point(i - 1, j - 1));
-
+        Move move =  board.mousePressEvent();
+        return move;
     }
 
 
