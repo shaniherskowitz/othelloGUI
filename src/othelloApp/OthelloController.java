@@ -11,14 +11,12 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import othelloApp.GUI.BoardGUI;
 import othelloApp.GUI.GameGUI;
 import othelloApp.GUI.GraphicUI;
 import othelloGame.*;
-
-
-import javax.swing.*;
 
 import java.io.IOException;
 
@@ -34,10 +32,7 @@ public class OthelloController implements Initializable {
     private BoardGUI board;
     private GraphicUI gui;
     @FXML
-    private HBox root;
-
-    @FXML
-    private Button startScene;
+    private Pane root;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -46,17 +41,17 @@ public class OthelloController implements Initializable {
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
-        board.draw();
+        //board.draw();
 
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
-            board.draw();
+            //board.draw();
         });
 
         root.heightProperty().addListener((observable, oldValue, newValue) -> {
             board.setPrefHeight(newValue.doubleValue());
-            board.draw();
+            //board.draw();
         });
     }
 
@@ -64,9 +59,14 @@ public class OthelloController implements Initializable {
     protected void startGame() {
         Player player1 = new HumanPlayer(Tile.X);
         Player player2 = new HumanPlayer(Tile.O);
-        Game game = new Game(player1, player2, gui, 8);
+        //root = board;
+        Game game = new Game(player1, player2, gui, board.getBoard());
+        //Game game = Game.gameFromSettings(gui, player1, player2);
+       /* try {
+            root = new FXMLLoader(getClass().getResource("board.fxml"));
+        }*/
         //board.reload();
-        //game.run();
+        game.run();
         /*Stage curr = ((Stage)startScene.getScene().getWindow());
         board.draw();
         curr.show();*/
@@ -92,11 +92,11 @@ public class OthelloController implements Initializable {
             player1TurnStatus = logic.turn(player1, board1, print);
         } else player2TurnStatus = logic.turn(player2, board1, print);*/
 
-        GameLogic gl = new RegularGameLogic();
+        /*GameLogic gl = new RegularGameLogic();
         List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
         GraphicUI graphicUI = new GraphicUI(board);
         graphicUI.printMoves('O', movesList);
-        graphicUI.getUserInput();
+        graphicUI.getUserInput();*/
 
     }
 
@@ -107,16 +107,19 @@ public class OthelloController implements Initializable {
 
     @FXML
     protected void settings() {
-        JFrame frame = new JFrame("Settings");
-        frame.setSize(250, 250);
-        JLabel label = new JLabel("Board Size");
-        JTextArea textArea = new JTextArea();
-        JButton button = new JButton("Add tab to another frame.");
-        frame.add(label);
-        frame.add(textArea);
-        frame.setVisible(true);
-        System.out.println(textArea.getText());
-
-
+        Stage stage = new Stage();
+        //HBox settingsPage = new HBox();
+        try {
+            GridPane settingsPage = (GridPane) FXMLLoader.load(getClass().getResource("settings.fxml"));
+            Scene scene = new Scene(settingsPage, 520, 400);
+            //scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+            Button selectBoardSize = new Button("Select size:");
+            Button chooseStartingPlayer = new Button("select startin player:");
+            settingsPage.getChildren().add(selectBoardSize);
+            settingsPage.getChildren().add(chooseStartingPlayer);
+            stage.setTitle("Settings");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) { System.out.print("Exception"); }
     }
 }
