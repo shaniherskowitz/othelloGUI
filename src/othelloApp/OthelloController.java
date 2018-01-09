@@ -2,6 +2,7 @@ package othelloApp;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.HBox;
 import othelloApp.GUI.BoardGUI;
@@ -9,12 +10,14 @@ import othelloApp.GUI.GameGUI;
 import othelloApp.GUI.GraphicUI;
 import othelloGame.*;
 
+import javax.swing.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 import static java.lang.System.exit;
+
 
 public class OthelloController implements Initializable {
     private BoardGUI board;
@@ -61,12 +64,24 @@ public class OthelloController implements Initializable {
 
 
     }
+
     @FXML
     protected void endGame() {
         exit(1);
     }
+
     @FXML
     protected void settings() {
+        JFrame frame = new JFrame("Settings");
+        frame.setSize(250, 250);
+        JLabel label = new JLabel("Board Size");
+        JTextArea textArea = new JTextArea();
+        JButton button = new JButton("Add tab to another frame.");
+        frame.add(label);
+        frame.add(textArea);
+        frame.setVisible(true);
+        System.out.println(textArea.getText());
+
 
     }
 }

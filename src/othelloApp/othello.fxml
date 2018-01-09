@@ -13,6 +13,7 @@
         <Button text="End Game" onAction="#endGame"/>
         <Button text="Settings" onAction="#settings"/>
     </VBox>
+
 </HBox>
 
 
