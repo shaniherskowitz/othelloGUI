@@ -1,6 +1,7 @@
 package othelloApp;
 
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ public class Main extends Application {
             primaryStage.setTitle("Othello");
             primaryStage.setScene(scene);
             primaryStage.show();
+
 
         } catch (Exception e) {
             e.printStackTrace();

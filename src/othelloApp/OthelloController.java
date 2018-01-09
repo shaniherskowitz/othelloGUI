@@ -25,6 +25,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.ResourceBundle;
 
 import static java.lang.System.exit;
@@ -33,6 +34,7 @@ import static java.lang.System.exit;
 public class OthelloController implements Initializable {
     private BoardGUI board;
     private GraphicUI gui;
+    private boolean turn1;
     @FXML
     private HBox root;
 
@@ -43,6 +45,7 @@ public class OthelloController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.board = new BoardGUI(new Board(8));
         this.gui = new GraphicUI(board);
+        this.turn1 = true;
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
@@ -93,11 +96,53 @@ public class OthelloController implements Initializable {
         } else player2TurnStatus = logic.turn(player2, board1, print);*/
 
         GameLogic gl = new RegularGameLogic();
-        List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
         GraphicUI graphicUI = new GraphicUI(board);
-        graphicUI.printMoves('O', movesList);
-        graphicUI.getUserInput();
+        if(turn1) {
+            List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
+            if (movesList.isEmpty()) {
+                gui.movesListIsEmpty();
+            }
+            gui.printMoves('O', movesList);
+            Move move = gui.getUserInput();
+            if (move.getPoint().equals(new Point(-5, -5))) return;
+            if (inMoves(move, movesList)) {
+                gui.setTurn(false);
+                turn1 = false;
+                try {
+                    gl.flipTiles(board.getBoard(), Tile.O, move.getPoint());
+                } catch (Exception e) {
+                }
+            }
+        } else {
+            List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
+            if (movesList.isEmpty()) {
+                gui.movesListIsEmpty();
+            }
+            gui.printMoves('X', movesList);
+            Move move = gui.getUserInput();
+            if (move.getPoint().equals(new Point(-5, -5))) return;
+            if (inMoves(move, movesList)) {
+                gui.setTurn(true);
+                turn1 = true;
+                try {
+                    gl.flipTiles(board.getBoard(), Tile.X, move.getPoint());
+                } catch (Exception e) {
+                }
+            }
+        }
 
+        //System.out.println(player1.getTurnsMove(movesList, gui, board.getBoard()).getPoint().PointToString());
+
+    }
+    public boolean inMoves(Move move, List<Move> movesList) {
+        ListIterator<Move> it = movesList.listIterator();
+        while (it.hasNext()) {
+            Point next = it.next().getPoint();
+            if (next.equals(move.getPoint())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @FXML

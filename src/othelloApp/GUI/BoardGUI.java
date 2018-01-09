@@ -21,22 +21,29 @@ import java.io.IOException;
 public class BoardGUI extends GridPane {
     private Board board;
     private Point move;
+    private int tileSize;
     // private Parent scene;
+
+    public void setTileSize(int tileSize) {
+        this.tileSize = tileSize;
+    }
 
     public BoardGUI(Board board) {
         this.board = board;
+        this.tileSize = 50;
+
+        //this.move = new Point(-5, -5);
         reload();
         this.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                move = new Point((int)event.getX()/50, (int)event.getY()/50);
+                move = new Point((int)event.getY()/tileSize, (int)event.getX()/tileSize);
                 System.out.println("mouse click detected! " + move.PointToString());
             }
         });
         this.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                System.out.println("mouse click detected! " + mouseEvent.getX());
             }
         });
         // this.scene = null;
@@ -72,6 +79,7 @@ public class BoardGUI extends GridPane {
 
         int cellHeight = height / board.getSize();
         int cellWidth = width / board.getBoard()[0].length;
+        this.setTileSize(cellHeight);
 
         PlayerGUI player1 = new PlayerGUI(this, cellWidth, cellHeight,
                 Color.rgb(255, 163, 224), Tile.X, this);
@@ -122,6 +130,7 @@ public class BoardGUI extends GridPane {
     }*/
 
     public Move mousePressEvent() {
+        if(move == null || move.getX() < 0 || move.getY() < 0) move = new Point(-5, -5);
         return new Move(move);
     }
 

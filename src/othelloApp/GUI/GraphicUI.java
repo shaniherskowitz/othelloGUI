@@ -16,9 +16,15 @@ import java.util.List;
 public class GraphicUI implements GameUI {
 
     private BoardGUI board;
+    private boolean turn;
+
+    public void setTurn(boolean turn) {
+        this.turn = turn;
+    }
 
     public GraphicUI(BoardGUI board) {
         this.board = board;
+        this.turn = true;
 
     }
 
@@ -29,7 +35,6 @@ public class GraphicUI implements GameUI {
         //board.setPrefHeight(400);
         board.draw();
         //root.getChildren().add(0, board1);
-
 
 
     }
@@ -45,12 +50,23 @@ public class GraphicUI implements GameUI {
 
 
     public void printMoves(char symbol, List<Move> movesList) {
+        board.getChildren().clear();
+        board.updateBoard(board.getBoard());
+        board.draw();
+        int height = (int) board.getPrefHeight();
+        int width = (int) board.getPrefHeight();
+        int cellHeight = height / board.getBoard().getSize();
+        int cellWidth = width / board.getBoard().getBoard()[0].length;
+
         for (int i = 0; i < movesList.size(); i++) {
-            javafx.scene.shape.Rectangle rect = new javafx.scene.shape.Rectangle(50, 50,
-                    Color.rgb(160, 40, 79));
+            javafx.scene.shape.Rectangle rect;
+            if (!turn) rect = new javafx.scene.shape.Rectangle(cellWidth, cellHeight,
+                    Color.rgb(255, 163, 224));
+            else rect = new javafx.scene.shape.Rectangle(cellWidth, cellHeight,
+                    Color.rgb(206, 70, 160));
             rect.setX(movesList.get(i).getPoint().getX());
             rect.setY(movesList.get(i).getPoint().getY());
-            board.add(rect, movesList.get(i).getPoint().getX(), movesList.get(i).getPoint().getY());
+            board.add(rect, movesList.get(i).getPoint().getY(), movesList.get(i).getPoint().getX());
         }
         board.reload();
 
@@ -71,10 +87,9 @@ public class GraphicUI implements GameUI {
     }
 
     public Move getUserInput() {
-        Move move = null;
-        while (move == null) {
-            move =  board.mousePressEvent();}
-        return move;
+
+        return board.mousePressEvent();
+
     }
 
 
