@@ -62,8 +62,9 @@ public class OthelloController implements Initializable {
         Player player1 = new HumanPlayer(Tile.X);
         Player player2 = new HumanPlayer(Tile.O);
         Game game = new Game(player1, player2, gui, 8);
-        //board.reload();
         game.run();
+        //board.reload();
+        //game.run();
         /*Stage curr = ((Stage)startScene.getScene().getWindow());
         board.draw();
         curr.show();*/
@@ -83,13 +84,13 @@ public class OthelloController implements Initializable {
         Board board1 = new Board(8);
         boolean turn = true;
         GameStatus gameStatus = GameStatus.IN_PROGRESS;
-        GameStatus player1TurnStatus = GameStatus.NOT_STARTED, player2TurnStatus = GameStatus.NOT_STARTED;
+        GameStatus player1TurnStatus = GameStatus.NOT_STARTED, player2TurnStatus = GameStatus.NOT_STARTED;*/
 
         /*if(turn) {
             player1TurnStatus = logic.turn(player1, board1, print);
-        } else player2TurnStatus = logic.turn(player2, board1, print);
+        } else player2TurnStatus = logic.turn(player2, board1, print);*/
 
-        GameLogic gl = new RegularGameLogic();
+        /*GameLogic gl = new RegularGameLogic();
         List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
         GraphicUI graphicUI = new GraphicUI(board);
         graphicUI.printMoves('O', movesList);*/
