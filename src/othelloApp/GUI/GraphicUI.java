@@ -2,6 +2,7 @@ package othelloApp.GUI;
 
 
 import javafx.event.EventHandler;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -45,11 +46,13 @@ public class GraphicUI implements GameUI {
 
     public void printMoves(char symbol, List<Move> movesList) {
         for (int i = 0; i < movesList.size(); i++) {
-            javafx.scene.shape.Rectangle rect = new javafx.scene.shape.Rectangle(50, 50, Color.rgb(160, 40, 79));
+            javafx.scene.shape.Rectangle rect = new javafx.scene.shape.Rectangle(50, 50,
+                    Color.rgb(160, 40, 79));
             rect.setX(movesList.get(i).getPoint().getX());
             rect.setY(movesList.get(i).getPoint().getY());
             board.add(rect, movesList.get(i).getPoint().getX(), movesList.get(i).getPoint().getY());
         }
+        board.reload();
 
     }
 
@@ -68,7 +71,9 @@ public class GraphicUI implements GameUI {
     }
 
     public Move getUserInput() {
-        Move move =  board.mousePressEvent();
+        Move move = null;
+        while (move == null) {
+            move =  board.mousePressEvent();}
         return move;
     }
 

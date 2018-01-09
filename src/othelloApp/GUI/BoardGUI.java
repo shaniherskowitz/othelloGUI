@@ -20,12 +20,26 @@ import java.io.IOException;
 
 public class BoardGUI extends GridPane {
     private Board board;
-   // private Parent scene;
+    private Point move;
+    // private Parent scene;
 
     public BoardGUI(Board board) {
         this.board = board;
         reload();
-       // this.scene = null;
+        this.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                move = new Point((int)event.getX()/50, (int)event.getY()/50);
+                System.out.println("mouse click detected! " + move.PointToString());
+            }
+        });
+        this.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                System.out.println("mouse click detected! " + mouseEvent.getX());
+            }
+        });
+        // this.scene = null;
         /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -43,7 +57,7 @@ public class BoardGUI extends GridPane {
         try {
             Parent scene = fxmlLoader.load();
             //scene.getScene().getWindow();
-           // ((Stage)this.getScene().getWindow()).setScene(new Scene(scene, 400, 400));
+            // ((Stage)this.getScene().getWindow()).setScene(new Scene(scene, 400, 400));
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
@@ -72,8 +86,7 @@ public class BoardGUI extends GridPane {
                 if (board.getBoard()[i][j] == Tile.X) {
                     player1.draw(j, i);
 
-                }
-                else if (board.getBoard()[i][j] == Tile.O) {
+                } else if (board.getBoard()[i][j] == Tile.O) {
                     player2.draw(j, i);
                 }
 
@@ -81,39 +94,43 @@ public class BoardGUI extends GridPane {
         }
 
     }
+
     public void updateBoard(Board board) {
         this.board = board;
     }
 
-    public Board getBoard() {return this.board;}
+    public Board getBoard() {
+        return this.board;
+    }
 
-    public class MouseHandler implements EventHandler<MouseEvent> {
+    /*public class MouseHandler implements EventHandler<MouseEvent> {
         private double x, y;
+
         @Override
         public void handle(MouseEvent event) {
+
             x = event.getX();
             y = event.getY();
+
             //System.out.println("mouse click detected!");
             event.consume();
         }
+
         public Move returnMove() {
             return processMousePressEvent(x, y);
         }
-    }
+    }*/
 
     public Move mousePressEvent() {
-        MouseHandler mouseHandler = new MouseHandler();
-        //mouseHandler.handle();
-        setOnMousePressed(mouseHandler);
-        return mouseHandler.returnMove();
+        return new Move(move);
     }
 
 
-    public Move processMousePressEvent(double x, double y) {
+   /* public Move processMousePressEvent(double x, double y) {
         int boardSize = (int) this.getPrefHeight();
-        int cellSize  = boardSize / board.getSize();
+        int cellSize = boardSize / board.getSize();
         if (x < 0 || y < 0 || x >= boardSize || y >= boardSize) return new Move(new Point());
-        return new Move(new Point((int)x/cellSize, (int)y/cellSize));
-    }
+        return new Move(new Point((int) x / cellSize, (int) y / cellSize));
+    }*/
 
 }

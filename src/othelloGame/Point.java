@@ -23,7 +23,7 @@ public class Point {
         return this.y;
     }
 
-    String PointToString() {
+    public String PointToString() {
         return "(" + x + ", " + y + ")";
     }
 

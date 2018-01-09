@@ -1,12 +1,15 @@
 package othelloApp;
 
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import othelloApp.GUI.BoardGUI;
@@ -43,17 +46,17 @@ public class OthelloController implements Initializable {
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
-        //board.draw();
+        board.draw();
 
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
-            //board.draw();
+            board.draw();
         });
 
         root.heightProperty().addListener((observable, oldValue, newValue) -> {
             board.setPrefHeight(newValue.doubleValue());
-            //board.draw();
+            board.draw();
         });
     }
 
@@ -62,7 +65,6 @@ public class OthelloController implements Initializable {
         Player player1 = new HumanPlayer(Tile.X);
         Player player2 = new HumanPlayer(Tile.O);
         Game game = new Game(player1, player2, gui, 8);
-        game.run();
         //board.reload();
         //game.run();
         /*Stage curr = ((Stage)startScene.getScene().getWindow());
@@ -90,10 +92,12 @@ public class OthelloController implements Initializable {
             player1TurnStatus = logic.turn(player1, board1, print);
         } else player2TurnStatus = logic.turn(player2, board1, print);*/
 
-        /*GameLogic gl = new RegularGameLogic();
+        GameLogic gl = new RegularGameLogic();
         List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
         GraphicUI graphicUI = new GraphicUI(board);
-        graphicUI.printMoves('O', movesList);*/
+        graphicUI.printMoves('O', movesList);
+        graphicUI.getUserInput();
+
     }
 
     @FXML
