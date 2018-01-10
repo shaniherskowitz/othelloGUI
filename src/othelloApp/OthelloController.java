@@ -1,31 +1,17 @@
 package othelloApp;
 
-
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
+import javafx.scene.paint.Color;
 import othelloApp.GUI.BoardGUI;
-import othelloApp.GUI.GameGUI;
 import othelloApp.GUI.GraphicUI;
+import othelloApp.GUI.ScoreGUI;
 import othelloGame.*;
 
-
 import javax.swing.*;
-
-import java.io.IOException;
-
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 import java.util.ResourceBundle;
 
 import static java.lang.System.exit;
@@ -34,116 +20,71 @@ import static java.lang.System.exit;
 public class OthelloController implements Initializable {
     private BoardGUI board;
     private GraphicUI gui;
-    private boolean turn1;
+    private Color player1Color;
+    private Color player2Color;
+    private int boardSize;
+
     @FXML
     private HBox root;
 
-    @FXML
-    private Button startScene;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.board = new BoardGUI(new Board(8));
+        this.player1Color = Color.rgb(255, 163, 224);
+        this.player2Color = Color.rgb(206, 70, 160);
+        this.boardSize = 6;
+
+        ScoreGUI scoreGUI = new ScoreGUI(player1Color, player2Color);
+        this.board = new BoardGUI(new Board(boardSize), player1Color, player2Color, true, scoreGUI);
         this.gui = new GraphicUI(board);
-        this.turn1 = true;
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
+
+        printFirstMoves();
         board.draw();
+
+
+        scoreGUI.setPrefWidth(40);
+        scoreGUI.setPrefHeight(20);
+        root.getChildren().add(1, scoreGUI);
+        scoreGUI.draw(board.getBoard(), true);
+
+        updateScreenSize();
+
+
+    }
+    private void updateScreenSize() {
 
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
-            board.draw();
+
+            printFirstMoves();
+            //board.draw();
         });
 
         root.heightProperty().addListener((observable, oldValue, newValue) -> {
             board.setPrefHeight(newValue.doubleValue());
-            board.draw();
+            printFirstMoves();
+            //board.draw();
         });
+    }
+    private void printFirstMoves() {
+        GameLogic gl = new RegularGameLogic();
+        List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
+        gui.printMoves('X',movesList);
     }
 
     @FXML
     protected void startGame() {
-        Player player1 = new HumanPlayer(Tile.X);
-        Player player2 = new HumanPlayer(Tile.O);
-        Game game = new Game(player1, player2, gui, 8);
-        //board.reload();
-        //game.run();
-        /*Stage curr = ((Stage)startScene.getScene().getWindow());
-        board.draw();
-        curr.show();*/
-
-        /*try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("board.fxml"));
-            loader.setRoot(board);
-            //loader.setController(board);
-            Parent parent = loader.load();
-            board.draw();
-            ((Stage)startScene.getScene().getWindow()).setScene(new Scene(parent, 400, 400));
-        } catch (IOException eox) {
-            eox.printStackTrace();
-        }*/
-       // game.run();
-        /*GameLogic logic = new RegularGameLogic();
-        Board board1 = new Board(8);
-        boolean turn = true;
-        GameStatus gameStatus = GameStatus.IN_PROGRESS;
-        GameStatus player1TurnStatus = GameStatus.NOT_STARTED, player2TurnStatus = GameStatus.NOT_STARTED;*/
-
-        /*if(turn) {
-            player1TurnStatus = logic.turn(player1, board1, print);
-        } else player2TurnStatus = logic.turn(player2, board1, print);*/
-
         GameLogic gl = new RegularGameLogic();
-        GraphicUI graphicUI = new GraphicUI(board);
-        if(turn1) {
-            List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
-            if (movesList.isEmpty()) {
-                gui.movesListIsEmpty();
-            }
-            gui.printMoves('O', movesList);
-            Move move = gui.getUserInput();
-            if (move.getPoint().equals(new Point(-5, -5))) return;
-            if (inMoves(move, movesList)) {
-                gui.setTurn(false);
-                turn1 = false;
-                try {
-                    gl.flipTiles(board.getBoard(), Tile.O, move.getPoint());
-                } catch (Exception e) {
-                }
-            }
-        } else {
-            List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
-            if (movesList.isEmpty()) {
-                gui.movesListIsEmpty();
-            }
-            gui.printMoves('X', movesList);
-            Move move = gui.getUserInput();
-            if (move.getPoint().equals(new Point(-5, -5))) return;
-            if (inMoves(move, movesList)) {
-                gui.setTurn(true);
-                turn1 = true;
-                try {
-                    gl.flipTiles(board.getBoard(), Tile.X, move.getPoint());
-                } catch (Exception e) {
-                }
-            }
-        }
+        List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
 
-        //System.out.println(player1.getTurnsMove(movesList, gui, board.getBoard()).getPoint().PointToString());
+        gui.printMoves('X',movesList);
+    }
 
-    }
-    public boolean inMoves(Move move, List<Move> movesList) {
-        ListIterator<Move> it = movesList.listIterator();
-        while (it.hasNext()) {
-            Point next = it.next().getPoint();
-            if (next.equals(move.getPoint())) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 
     @FXML
     protected void endGame() {

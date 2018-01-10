@@ -2,105 +2,99 @@ package othelloApp.GUI;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-import othelloGame.Board;
-import othelloGame.Move;
-import othelloGame.Point;
-import othelloGame.Tile;
+import othelloGame.*;
 
-
-import java.io.IOException;
+import java.util.List;
 
 
 public class BoardGUI extends GridPane {
     private Board board;
     private Point move;
     private int tileSize;
-    // private Parent scene;
+    private boolean player1turn;
+    private PlayerGUI player1;
+    private PlayerGUI player2;
+    private ScoreGUI score;
 
-    public void setTileSize(int tileSize) {
-        this.tileSize = tileSize;
-    }
 
-    public BoardGUI(Board board) {
+    public BoardGUI(Board board, Color color1, Color color2, boolean whoStarts, ScoreGUI scoreGUI) {
         this.board = board;
         this.tileSize = 50;
+        this.player1turn = whoStarts;
+        this.player1 = new PlayerGUI(this, color1, Tile.X, this);
+        this.player2 = new PlayerGUI(this, color2, Tile.O, this);
+        this.score = scoreGUI;
 
-        //this.move = new Point(-5, -5);
-        reload();
+
+        load();
+        playerClick();
+
+
+    }
+
+    void playerClick() {
+        GameLogic gl = new RegularGameLogic();
+        GraphicUI gui = new GraphicUI(this);
         this.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
-                move = new Point((int)event.getY()/tileSize, (int)event.getX()/tileSize);
-                System.out.println("mouse click detected! " + move.PointToString());
+                PlayerGUI current = getCurrentPlayer();
+                move = new Point((int) event.getY() / tileSize, (int) event.getX() / tileSize);
+                //System.out.println("mouse click detected! " + move.PointToString());
+                boolean check = current.Turn(new Move(move, 0));
+
+                List<Move> movesList1 = gl.getMovesList(getOtherPlayer().getSymbol(), getBoard());
+
+                if (check && !movesList1.isEmpty()) player1turn = !player1turn;
+
+
+                List<Move> movesList = gl.getMovesList(getCurrentPlayer().getSymbol(), getBoard());
+                gui.printMoves(getCurrentPlayer().getChar(), movesList);
+                if (board.boardFull() || noMoves()) score.declareWinner(board);
+
             }
         });
-        this.addEventFilter(MouseEvent.MOUSE_PRESSED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-            }
-        });
-        // this.scene = null;
-        /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }*/
     }
 
-    public void reload() {
+    private boolean noMoves() {
+        GameLogic gl = new RegularGameLogic();
+        List<Move> movesList1 = gl.getMovesList(player1.getSymbol(), getBoard());
+        List<Move> movesList2 = gl.getMovesList(player2.getSymbol(), getBoard());
+        return (movesList1.isEmpty() && movesList2.isEmpty());
+    }
+
+    public void load() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-        try {
-            Parent scene = fxmlLoader.load();
-            //scene.getScene().getWindow();
-            // ((Stage)this.getScene().getWindow()).setScene(new Scene(scene, 400, 400));
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
+        this.draw();
     }
 
     public void draw() {
         this.getChildren().clear();
 
         int height = (int) this.getPrefHeight();
-        //int width = (int) this.getPrefWidth();
-        int width = (int) this.getPrefHeight();
-
-        int cellHeight = height / board.getSize();
-        int cellWidth = width / board.getBoard()[0].length;
-        this.setTileSize(cellHeight);
-
-        PlayerGUI player1 = new PlayerGUI(this, cellWidth, cellHeight,
-                Color.rgb(255, 163, 224), Tile.X, this);
-        PlayerGUI player2 = new PlayerGUI(this, cellWidth, cellHeight,
-                Color.rgb(206, 70, 160), Tile.O, this);
+        this.tileSize = height / board.getSize();
 
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
-                Rectangle rect = new Rectangle(cellWidth, cellHeight, Color.rgb(122, 0, 69));
+                Rectangle rect = new Rectangle(tileSize, tileSize, Color.rgb(122, 0, 69));
                 rect.setStroke(Color.rgb(252, 239, 255));
                 this.add(rect, j, i);
                 if (board.getBoard()[i][j] == Tile.X) {
-                    player1.draw(j, i);
+                    player1.draw(j, i, tileSize);
 
                 } else if (board.getBoard()[i][j] == Tile.O) {
-                    player2.draw(j, i);
+                    player2.draw(j, i, tileSize);
                 }
 
             }
         }
-
+        score.draw(board, player1turn);
     }
 
     public void updateBoard(Board board) {
@@ -111,35 +105,20 @@ public class BoardGUI extends GridPane {
         return this.board;
     }
 
-    /*public class MouseHandler implements EventHandler<MouseEvent> {
-        private double x, y;
-
-        @Override
-        public void handle(MouseEvent event) {
-
-            x = event.getX();
-            y = event.getY();
-
-            //System.out.println("mouse click detected!");
-            event.consume();
-        }
-
-        public Move returnMove() {
-            return processMousePressEvent(x, y);
-        }
-    }*/
 
     public Move mousePressEvent() {
-        if(move == null || move.getX() < 0 || move.getY() < 0) move = new Point(-5, -5);
+        if (move == null || move.getX() < 0 || move.getY() < 0) move = new Point(-5, -5);
         return new Move(move);
     }
 
+    public PlayerGUI getCurrentPlayer() {
+        if (player1turn) return player1;
+        return player2;
+    }
 
-   /* public Move processMousePressEvent(double x, double y) {
-        int boardSize = (int) this.getPrefHeight();
-        int cellSize = boardSize / board.getSize();
-        if (x < 0 || y < 0 || x >= boardSize || y >= boardSize) return new Move(new Point());
-        return new Move(new Point((int) x / cellSize, (int) y / cellSize));
-    }*/
+    public PlayerGUI getOtherPlayer() {
+        if (!player1turn) return player1;
+        return player2;
+    }
 
 }
