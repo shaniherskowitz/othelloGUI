@@ -2,14 +2,16 @@ package othelloApp;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import othelloApp.GUI.BoardGUI;
 import othelloApp.GUI.GraphicUI;
 import othelloApp.GUI.ScoreGUI;
 import othelloGame.*;
 
-import javax.swing.*;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -20,27 +22,33 @@ import static java.lang.System.exit;
 public class OthelloController implements Initializable {
     private BoardGUI board;
     private GraphicUI gui;
-    private Color player1Color;
-    private Color player2Color;
-    private int boardSize;
 
     @FXML
     private HBox root;
+    //@FXML
+
+    @FXML
+    private Button settingsButton;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.player1Color = Color.rgb(255, 191, 247);
-        this.player2Color = Color.rgb(255, 224, 251);
-        this.boardSize = 6;
+
+        Settings settings = Settings.loadSettings();
+        Color player1Color = settings.getColorX();
+        Color player2Color = settings.getColorY();
+        //this.player1Color = Color.rgb(171, 244, 242);
+        //this.player2Color = Color.rgb(252, 149, 118);
+        boolean whoStarts = true;
+        if (!settings.getFirstPlayer().equals("X")) { whoStarts = false; }
 
         ScoreGUI scoreGUI = new ScoreGUI(player1Color, player2Color);
-        this.board = new BoardGUI(new Board(boardSize), player1Color, player2Color, true, scoreGUI);
+        this.board = new BoardGUI(new Board(settings.getSize()), player1Color, player2Color, whoStarts, scoreGUI);
         this.gui = new GraphicUI(board);
         board.setPrefWidth(400);
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
-
+        //Button settingsButton = new Button("Settings");
         printFirstMoves();
         board.draw();
 
@@ -93,16 +101,7 @@ public class OthelloController implements Initializable {
 
     @FXML
     protected void settings() {
-        JFrame frame = new JFrame("Settings");
-        frame.setSize(250, 250);
-        JLabel label = new JLabel("Board Size");
-        JTextArea textArea = new JTextArea();
-        JButton button = new JButton("Add tab to another frame.");
-        frame.add(label);
-        frame.add(textArea);
-        frame.setVisible(true);
-        System.out.println(textArea.getText());
-
-
+        Settings settings = Settings.loadSettings();
+        settings.runSettingScene((Stage) root.getScene().getWindow());
     }
 }

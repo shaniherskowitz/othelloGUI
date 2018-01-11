@@ -34,11 +34,8 @@ public class BoardGUI extends GridPane {
         this.player2 = new PlayerGUI(this, color2, Tile.O, this);
         this.score = scoreGUI;
 
-
         load();
         playerClick();
-
-
     }
 
     void playerClick() {
@@ -89,6 +86,7 @@ public class BoardGUI extends GridPane {
             for (int j = 0; j < board.getSize(); j++) {
                 Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(new Image("othelloApp/GUI/download (1).jpeg")));
                 rect.setStroke(Color.WHITE);
+
                 this.add(rect, j, i);
                 if (board.getBoard()[i][j] == Tile.X) {
                     player1.draw(j, i, tileSize);
