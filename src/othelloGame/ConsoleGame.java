@@ -7,7 +7,7 @@ public class ConsoleGame {
         GameUI print = new ConsoleUI();
 
 
-        Game game = new Game(p1, p2, print, 3);
+        Game game = new Game(p1, p2, print, 8);
         game.run();
     }
 

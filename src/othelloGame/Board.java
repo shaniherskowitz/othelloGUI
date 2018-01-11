@@ -54,7 +54,7 @@ public class Board {
         return oTiles;
     }
 
-    boolean boardFull() {
+    public boolean boardFull() {
         return (xTiles + oTiles == size * size);
     }
 
