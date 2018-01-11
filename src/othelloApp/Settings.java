@@ -8,16 +8,12 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import static java.lang.System.exit;
 
 
 public class Settings implements Initializable{
@@ -122,7 +118,7 @@ public class Settings implements Initializable{
         if (startingPlayer.isSelected()) { settings[1] = "X"; }
         else { settings[1] = "O"; }
     }
-
+    @FXML
     public void saveSettings() {
         try {
             PrintWriter writer = new PrintWriter((fileName), "utf-8");
@@ -130,7 +126,7 @@ public class Settings implements Initializable{
             writer.close();
         } catch (FileNotFoundException ex) { System.out.println("Unable to open settings");
         } catch (IOException ex) { System.out.println("Error reading settings"); }
-        resetScene();
+        endScene();
     }
 
     public void runSettingScene(Stage stage) {
@@ -143,14 +139,10 @@ public class Settings implements Initializable{
 
     }
 
-    public void resetScene() {
+    public void endScene() {
         Stage stage = (Stage) saveButton.getScene().getWindow();
-        try {
-            HBox prevScene = FXMLLoader.load(getClass().getResource("othello.fxml"));
-            Scene scene = new Scene(prevScene, 520, 400);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) { stage.close(); }
+        stage.close();
+
     }
 
 }

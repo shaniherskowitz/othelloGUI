@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="520.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="othelloApp.MenuController">
+   <children>
+      <Button fx:id="settingsButton" layoutX="225.0" layoutY="200.0" mnemonicParsing="false" onAction="#settings" text="Settings">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="182.0" layoutY="121.0" onAction="#startGame" prefHeight="47.0" prefWidth="157.0" text="Start Game" textAlignment="CENTER">
+         <font>
+            <Font name="American Typewriter Bold" size="22.0" />
+         </font></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="81.0" layoutY="14.0" prefHeight="80.0" prefWidth="359.0" text="Main Menu" textFill="#9e1271">
+         <font>
+            <Font name="American Typewriter" size="52.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
