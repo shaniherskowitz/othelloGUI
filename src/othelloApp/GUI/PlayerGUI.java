@@ -27,6 +27,7 @@ public class PlayerGUI {
     public void draw(int col, int row, int tileSize) {
         Circle circle = new Circle(tileSize, tileSize, tileSize / 2 - 2);
         circle.setFill(color);
+        circle.setStroke(color.darker());
         grid.add(circle, col, row);
         grid.getChildren().remove(circle);
         grid.add(circle, col, row);

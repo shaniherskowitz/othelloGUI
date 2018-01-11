@@ -30,8 +30,8 @@ public class OthelloController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        this.player1Color = Color.rgb(255, 163, 224);
-        this.player2Color = Color.rgb(206, 70, 160);
+        this.player1Color = Color.rgb(255, 191, 247);
+        this.player2Color = Color.rgb(255, 224, 251);
         this.boardSize = 6;
 
         ScoreGUI scoreGUI = new ScoreGUI(player1Color, player2Color);

@@ -2,12 +2,17 @@ package othelloApp.GUI;
 
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.image.*;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import othelloGame.*;
+import othelloGame.Point;
 
+import java.awt.*;
 import java.util.List;
 
 
@@ -82,8 +87,8 @@ public class BoardGUI extends GridPane {
 
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
-                Rectangle rect = new Rectangle(tileSize, tileSize, Color.rgb(122, 0, 69));
-                rect.setStroke(Color.rgb(252, 239, 255));
+                Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(new Image("othelloApp/GUI/download (1).jpeg")));
+                rect.setStroke(Color.WHITE);
                 this.add(rect, j, i);
                 if (board.getBoard()[i][j] == Tile.X) {
                     player1.draw(j, i, tileSize);

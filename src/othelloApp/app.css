@@ -1,11 +1,11 @@
 .button {
  -fx-text-fill: white;
  -fx-font-weight: bold;
- -fx-background-color: linear-gradient(rgb(122, 0, 69), pink);
+ -fx-background-color: linear-gradient(rgb(122, 0, 0), pink);
 }
 
 .root {
--fx-background-color: linear-gradient(pink,rgb(122, 0, 69));
+-fx-background-color: linear-gradient(rgb(255, 224, 251), white);
 }
 .Text {
 -fx-font-size: 32px;
