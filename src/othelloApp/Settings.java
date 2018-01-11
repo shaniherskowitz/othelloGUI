@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -15,6 +16,8 @@ import javafx.stage.Stage;
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static java.lang.System.exit;
 
 /**
  * Created by Liora on 09-Jan-18.
@@ -35,10 +38,6 @@ public class Settings implements Initializable{
     @FXML
     Rectangle circleY;
 
-    //private int size;
-    //private String firstPlayer;
-    //private Color colorX;
-    //private Color colorY;
     private String[] settings = null;
     private static String fileName = "othelloApp/gameSettings";
 
@@ -52,6 +51,12 @@ public class Settings implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         updateSelf();
         cbSize.setValue(getSize());
+        Color colorX = parseToColor(settings[2]);
+        Color colorY = parseToColor(settings[3]);
+        colorPickerX.setValue(colorX);
+        colorPickerY.setValue(colorY);
+        circleX.setFill(colorX);
+        circleY.setFill(colorY);
     }
 
     public void updateSelf() {
@@ -125,16 +130,20 @@ public class Settings implements Initializable{
             writer.close();
         } catch (FileNotFoundException ex) { System.out.println("Unable to open settings");
         } catch (IOException ex) { System.out.println("Error reading settings"); }
+
         Stage stage = (Stage) saveButton.getScene().getWindow();
-        stage.close();
+        try {
+            HBox prevScene = FXMLLoader.load(getClass().getResource("othello.fxml"));
+            Scene scene = new Scene(prevScene, 520, 400);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) { stage.close(); }
     }
 
-    public void runSettingScene() {
+    public void runSettingScene(Stage stage) {
         try {
-            Stage stage = new Stage();
             GridPane settingsPage = FXMLLoader.load(getClass().getResource("settings.fxml"));
             Scene scene = new Scene(settingsPage, 520, 400);
-            stage.setTitle("Settings");
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) { System.out.print("Exception in loading settings fxml"); }
