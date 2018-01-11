@@ -26,6 +26,8 @@ public class Settings implements Initializable{
     @FXML
     Button saveButton;
     @FXML
+    Button cancelButton;
+    @FXML
     ColorPicker colorPickerX;
     @FXML
     ColorPicker colorPickerY;
@@ -130,14 +132,7 @@ public class Settings implements Initializable{
             writer.close();
         } catch (FileNotFoundException ex) { System.out.println("Unable to open settings");
         } catch (IOException ex) { System.out.println("Error reading settings"); }
-
-        Stage stage = (Stage) saveButton.getScene().getWindow();
-        try {
-            HBox prevScene = FXMLLoader.load(getClass().getResource("othello.fxml"));
-            Scene scene = new Scene(prevScene, 520, 400);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e) { stage.close(); }
+        resetScene();
     }
 
     public void runSettingScene(Stage stage) {
@@ -150,5 +145,14 @@ public class Settings implements Initializable{
 
     }
 
+    public void resetScene() {
+        Stage stage = (Stage) saveButton.getScene().getWindow();
+        try {
+            HBox prevScene = FXMLLoader.load(getClass().getResource("othello.fxml"));
+            Scene scene = new Scene(prevScene, 520, 400);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) { stage.close(); }
+    }
 
 }

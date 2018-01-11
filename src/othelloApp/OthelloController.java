@@ -22,9 +22,6 @@ import static java.lang.System.exit;
 public class OthelloController implements Initializable {
     private BoardGUI board;
     private GraphicUI gui;
-    private Color player1Color;
-    private Color player2Color;
-    private int boardSize;
 
     @FXML
     private HBox root;
@@ -37,11 +34,10 @@ public class OthelloController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Settings settings = Settings.loadSettings();
+        Color player1Color = settings.getColorX();
+        Color player2Color = settings.getColorY();
         //this.player1Color = Color.rgb(171, 244, 242);
-        this.player1Color = settings.getColorX();
-        this.player2Color = settings.getColorY();
         //this.player2Color = Color.rgb(252, 149, 118);
-        this.boardSize = 6;
         boolean whoStarts = true;
         if (!settings.getFirstPlayer().equals("X")) { whoStarts = false; }
 

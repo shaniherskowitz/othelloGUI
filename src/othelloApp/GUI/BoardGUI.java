@@ -34,11 +34,8 @@ public class BoardGUI extends GridPane {
         this.player2 = new PlayerGUI(this, color2, Tile.O, this);
         this.score = scoreGUI;
 
-
         load();
         playerClick();
-
-
     }
 
     void playerClick() {
