@@ -97,23 +97,23 @@ public class Settings implements Initializable{
         settings[3] = "0.0 0.1 0.0";
         return new Settings(settings);
     }
-
+    @FXML
     public void setSize() {
         settings[0] = Integer.toString(cbSize.getValue());
     }
-
+    @FXML
     public void setColorX() {
         Color color = colorPickerX.getValue();
         circleX.setFill(colorPickerX.getValue());
         settings[2] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
     }
-
+    @FXML
     public void setColorY() {
-        Color color = colorPickerX.getValue();
+        Color color = colorPickerY.getValue();
         circleY.setFill(colorPickerY.getValue());
         settings[3] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
     }
-
+    @FXML
     public void setFirstPlayer() {
         if (startingPlayer.isSelected()) { settings[1] = "X"; }
         else { settings[1] = "O"; }
@@ -138,7 +138,7 @@ public class Settings implements Initializable{
         } catch (Exception e) { System.out.print("Exception in loading settings fxml"); }
 
     }
-
+    @FXML
     public void endScene() {
         Stage stage = (Stage) saveButton.getScene().getWindow();
         stage.close();

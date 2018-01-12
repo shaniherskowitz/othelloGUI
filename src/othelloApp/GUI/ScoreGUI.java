@@ -47,15 +47,19 @@ public class ScoreGUI extends GridPane {
 
     public void declareWinner(Board board) {
         Text winner;
+        Circle circle1 = new Circle(0, 0 , 10, player1Color);
+        Circle circle2 = new Circle(0, 0 , 10, player2Color);
         this.getChildren().clear();
         if (board.getXTiles() > board.getOTiles()) {
-            winner = new Text("Winner: " + 1);
+            winner = new Text("  Winner!");
+            this.add(circle1, 0, 5);
         } else if(board.getXTiles() < board.getOTiles()) {
-            winner = new Text("Winner: " + 2);
+            winner = new Text("   Winner!");
+            this.add(circle2, 0, 5);
         } else {
             winner = new Text("Tie!! ");
         }
-        winner.setStyle("-fx-font: 20 Courier;");
+        winner.setStyle("-fx-font: 18 Courier;");
         this.add(winner, 0, 5);
     }
 

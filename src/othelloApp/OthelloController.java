@@ -49,7 +49,7 @@ public class OthelloController implements Initializable {
         board.setPrefHeight(400);
         root.getChildren().add(0, board);
         //Button settingsButton = new Button("Settings");
-        printFirstMoves();
+        printFirstMoves(whoStarts);
         board.draw();
 
 
@@ -58,30 +58,35 @@ public class OthelloController implements Initializable {
         root.getChildren().add(1, scoreGUI);
         scoreGUI.draw(board.getBoard(), true);
 
-        updateScreenSize();
+        updateScreenSize(whoStarts);
 
 
     }
-    private void updateScreenSize() {
+    private void updateScreenSize(boolean whoStarts) {
 
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
 
-            printFirstMoves();
+            printFirstMoves(whoStarts);
             //board.draw();
         });
 
         root.heightProperty().addListener((observable, oldValue, newValue) -> {
             board.setPrefHeight(newValue.doubleValue());
-            printFirstMoves();
+            printFirstMoves(whoStarts);
             //board.draw();
         });
     }
-    private void printFirstMoves() {
+    private void printFirstMoves(boolean whoStarts) {
         GameLogic gl = new RegularGameLogic();
-        List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
-        gui.printMoves('X',movesList);
+        if (whoStarts) {
+            List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
+            gui.printMoves('X', movesList);
+        } else {
+            List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
+            gui.printMoves('O', movesList);
+        }
     }
 
     @FXML
