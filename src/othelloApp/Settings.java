@@ -28,7 +28,9 @@ public class Settings implements Initializable{
     @FXML
     ChoiceBox<Integer> cbSize;
     @FXML
-    ToggleButton startingPlayer;
+    ToggleButton startingPlayer1;
+    @FXML
+    ToggleButton startingPlayer2;
     @FXML
     Rectangle circleX;
     @FXML
@@ -47,12 +49,26 @@ public class Settings implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         updateSelf();
         cbSize.setValue(getSize());
-        Color colorX = parseToColor(settings[2]);
-        Color colorY = parseToColor(settings[3]);
-        colorPickerX.setValue(colorX);
-        colorPickerY.setValue(colorY);
-        circleX.setFill(colorX);
-        circleY.setFill(colorY);
+        Color color1 = parseToColor(settings[2]);
+        Color color2 = parseToColor(settings[3]);
+        colorPickerX.setValue(color1);
+        colorPickerY.setValue(color2);
+        circleX.setFill(color1);
+        circleY.setFill(color2);
+        setToggleButtonColor();
+    }
+
+    public void setToggleButtonColor() {
+       // startingPlayer1.setSelected(settings[1].equals("X"));
+       // startingPlayer2.setSelected(settings[1].equals("O"));
+        Color color1 = colorPickerX.getValue();
+        Color color2 = colorPickerY.getValue();
+        String stringColor1 = "-fx-color: rgb(" + color1.getRed()*255 + ", "
+                + color1.getGreen()*255 + ", " + color1.getBlue()*255 + ")";
+        String stringColor2 = "-fx-color: rgb(" + color2.getRed()*255 + ", "
+                + color2.getGreen()*255 + ", " + color2.getBlue()*255 + ")";
+        startingPlayer1.setStyle(stringColor1);
+        startingPlayer2.setStyle(stringColor2);
     }
 
     public void updateSelf() {
@@ -106,17 +122,19 @@ public class Settings implements Initializable{
         Color color = colorPickerX.getValue();
         circleX.setFill(colorPickerX.getValue());
         settings[2] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
+        setToggleButtonColor();
     }
     @FXML
     public void setColorY() {
         Color color = colorPickerY.getValue();
         circleY.setFill(colorPickerY.getValue());
         settings[3] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
+        setToggleButtonColor();
     }
     @FXML
     public void setFirstPlayer() {
-        if (startingPlayer.isSelected()) { settings[1] = "X"; }
-        else { settings[1] = "O"; }
+        if (startingPlayer1.isSelected()) { settings[1] = "X"; }
+        if (startingPlayer2.isSelected()) { settings[1] = "O"; }
     }
     @FXML
     public void saveSettings() {

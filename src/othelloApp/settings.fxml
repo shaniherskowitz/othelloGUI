@@ -17,12 +17,12 @@
 
 <GridPane alignment="center" hgap="10" prefHeight="400.0" prefWidth="500.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.Settings">
    <children>
-       <GridPane alignment="CENTER" hgap="10" prefHeight="289.0" prefWidth="270.0" vgap="10" GridPane.rowIndex="1">
+       <GridPane alignment="CENTER" prefHeight="289.0" prefWidth="270.0" vgap="10.0" GridPane.rowIndex="1">
            <children>
-               <ColorPicker fx:id="colorPickerY" onAction="#setColorY" prefHeight="32.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+               <ColorPicker fx:id="colorPickerY" onAction="#setColorY" prefHeight="32.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
             </ColorPicker>
                <Label GridPane.columnIndex="0" GridPane.rowIndex="1" />
-               <ChoiceBox fx:id="cbSize" onAction="#setSize" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <ChoiceBox fx:id="cbSize" onMousePressed="#setSize" prefWidth="150.0" value="8" GridPane.columnIndex="1" GridPane.rowIndex="4">
                    <items>
                        <FXCollections fx:factory="observableArrayList">
                            <Integer fx:value="4" /> <Integer fx:value="6" /> <Integer fx:value="8" /> <Integer fx:value="10" /> <Integer fx:value="12" />
@@ -31,20 +31,21 @@
                    </items>
                </ChoiceBox>
                <ColorPicker fx:id="colorPickerX" layoutX="74.0" layoutY="103.0" onAction="#setColorX" prefHeight="32.0" prefWidth="40.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-               <Rectangle fx:id="circleX" arcHeight="5.0" arcWidth="5.0" height="32.0" stroke="TRANSPARENT" strokeType="INSIDE" width="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-               <Rectangle fx:id="circleY" arcHeight="5.0" arcWidth="5.0" height="32.0" stroke="TRANSPARENT" strokeType="INSIDE" width="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               <Rectangle fx:id="circleX" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="32.0" stroke="TRANSPARENT" strokeType="INSIDE" width="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <Rectangle fx:id="circleY" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="32.0" stroke="TRANSPARENT" strokeType="INSIDE" width="40.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                <Label prefHeight="27.0" prefWidth="81.0" text="Player1 Color:" GridPane.rowIndex="1" />
                <Label text="Player2 Color:" GridPane.rowIndex="2" />
                <Label prefHeight="17.0" prefWidth="84.0" text="Board Size:" GridPane.rowIndex="4" />
                <Label prefHeight="23.0" prefWidth="84.0" text="Starting Player:" GridPane.rowIndex="3" />
-            <ToggleButton fx:id="startingPlayer" mnemonicParsing="false" onAction="#setFirstPlayer" prefHeight="25.0" prefWidth="57.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ToggleButton fx:id="startingPlayer1" mnemonicParsing="false" onAction="#setFirstPlayer" prefHeight="25.0" prefWidth="38.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveSettings" prefHeight="25.0" prefWidth="85.0" text="Save" GridPane.rowIndex="7" />
             <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#endScene" prefHeight="25.0" prefWidth="72.0" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <ToggleButton fx:id="startingPlayer2" layoutX="125.0" layoutY="154.0" mnemonicParsing="false" onAction="#setFirstPlayer" prefHeight="25.0" prefWidth="38.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
            </children>
            <columnConstraints>
                <ColumnConstraints maxWidth="128.0" minWidth="11.0" prefWidth="85.0" />
-               <ColumnConstraints maxWidth="128.0" minWidth="0.0" prefWidth="82.0" />
-               <ColumnConstraints maxWidth="128.0" minWidth="0.0" prefWidth="0.0" />
+               <ColumnConstraints maxWidth="128.0" minWidth="0.0" prefWidth="38.0" />
+            <ColumnConstraints maxWidth="77.0" minWidth="45.0" prefWidth="77.0" />
             <ColumnConstraints />
            </columnConstraints>
            <rowConstraints>
