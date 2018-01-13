@@ -5,6 +5,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import othelloApp.WinScreen;
 import othelloGame.Board;
 
 
@@ -53,6 +55,7 @@ public class ScoreGUI extends GridPane {
         if (board.getXTiles() > board.getOTiles()) {
             winner = new Text("  Winner!");
             this.add(circle1, 0, 5);
+
         } else if(board.getXTiles() < board.getOTiles()) {
             winner = new Text("   Winner!");
             this.add(circle2, 0, 5);
@@ -63,5 +66,7 @@ public class ScoreGUI extends GridPane {
         this.add(winner, 0, 5);
     }
 
-
+    private void runWinScreen(Runnable runnable) {
+        runnable.run();
+    }
 }

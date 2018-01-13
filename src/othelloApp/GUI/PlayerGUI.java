@@ -1,6 +1,8 @@
 package othelloApp.GUI;
 
 
+import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -25,9 +27,10 @@ public class PlayerGUI {
     }
 
     public void draw(int col, int row, int tileSize) {
-        Circle circle = new Circle(tileSize, tileSize, tileSize / 2 - 2);
+        Circle circle = new Circle(tileSize, tileSize, (tileSize - 20) / 2 - 2);
         circle.setFill(color);
         circle.setStroke(color.darker());
+        grid.setHalignment(circle, HPos.CENTER);
         grid.add(circle, col, row);
         grid.getChildren().remove(circle);
         grid.add(circle, col, row);
