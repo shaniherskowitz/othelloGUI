@@ -9,11 +9,11 @@
 
 <AnchorPane fx:id="root" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.MenuController">
    <children>
-      <Button fx:id="settingsButton" layoutX="261.0" layoutY="250.0" mnemonicParsing="false" onAction="#settings" prefHeight="48.0" prefWidth="163.0" text="Settings">
+      <Button fx:id="settingsButton" layoutX="261.0" layoutY="250.0" mnemonicParsing="false" onAction="#settings" prefHeight="48.0" prefWidth="163.0" text="SETTINGS">
          <font>
             <Font name="American Typewriter" size="22.0" />
          </font></Button>
-      <Button fx:id="startGameButton" alignment="CENTER" layoutX="75.0" layoutY="249.0" onAction="#startGame" prefHeight="48.0" prefWidth="163.0" text="Start Game" textAlignment="CENTER">
+      <Button fx:id="startGameButton" alignment="CENTER" layoutX="75.0" layoutY="249.0" onAction="#startGame" prefHeight="48.0" prefWidth="163.0" text="START GAME" textAlignment="CENTER">
          <font>
             <Font name="American Typewriter Bold" size="22.0" />
          </font></Button>
@@ -22,12 +22,12 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Button fx:id="howToPlayButton" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#howToPlay" prefHeight="48.0" prefWidth="163.0" text="How To Play">
+      <Button fx:id="howToPlayButton" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#howToPlay" prefHeight="48.0" prefWidth="163.0" text="HOW TO PLAY">
          <font>
             <Font size="22.0" />
          </font>
       </Button>
-      <Button layoutX="261.0" layoutY="312.0" mnemonicParsing="false" onAction="#quit" prefHeight="48.0" prefWidth="163.0" text="Quit">
+      <Button layoutX="261.0" layoutY="312.0" mnemonicParsing="false" onAction="#quit" prefHeight="48.0" prefWidth="163.0" text="QUIT">
          <font>
             <Font size="22.0" />
          </font>

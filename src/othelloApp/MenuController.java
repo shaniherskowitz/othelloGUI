@@ -71,28 +71,6 @@ public class MenuController {
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) { e.printStackTrace(); }
-        /*String textFile = getInstruction();
-        Text text = new Text(textFile);
-        TextFlow textFlow = new TextFlow(text);
-        Scene scene = new Scene(textFlow, 520, 400);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();*/
-    }
-    private String getInstruction() {
-        String fileName = "othelloApp/howToPlay.txt";
-        StringBuilder sb = new StringBuilder();
-        try {
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
-            String curLine = bufferedReader.readLine();
-            while (curLine != null){
-                sb.append(curLine);
-                curLine = bufferedReader.readLine();
-            }
-            bufferedReader.close();
-        } catch (FileNotFoundException ex) { System.out.println("Unable to open how to play");
-        } catch (IOException ex) { System.out.println("Error reading how to play"); }
-        return sb.toString();
     }
 
     @FXML

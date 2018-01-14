@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.HowToPlay">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.HowToPlay">
    <children>
-      <Button fx:id="mainMenuButton" layoutY="366.0" mnemonicParsing="false" onAction="#loadMainMenu" prefHeight="34.0" prefWidth="114.0" text="Back" />
-      <Label layoutX="173.0" layoutY="24.0" prefHeight="50.0" prefWidth="174.0" text="How To Play:">
+      <Button fx:id="mainMenuButton" layoutY="366.0" mnemonicParsing="false" onAction="#loadMainMenu" prefHeight="34.0" prefWidth="114.0" text="BACK" />
+      <Label layoutX="173.0" layoutY="24.0" prefHeight="50.0" prefWidth="174.0" text="How To Play:" textFill="#9e1271">
          <font>
             <Font name="Arial Bold" size="26.0" />
          </font>
       </Label>
+      <Button fx:id="startGameButton" layoutX="406.0" layoutY="366.0" mnemonicParsing="false" onAction="#startGame" prefHeight="34.0" prefWidth="114.0" text="START GAME" />
    </children>
 </AnchorPane>
