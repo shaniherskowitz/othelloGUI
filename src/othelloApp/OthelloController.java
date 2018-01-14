@@ -72,6 +72,8 @@ public class OthelloController implements Initializable {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
             scoreGUI.setLayoutX(boardNewWidth);
+            mainMenuButton.setLayoutX(boardNewWidth);
+            quitButton.setLayoutX(boardNewWidth);
             printFirstMoves(whoStarts);
         });
 

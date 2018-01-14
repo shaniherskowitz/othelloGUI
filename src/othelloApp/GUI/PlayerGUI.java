@@ -30,7 +30,7 @@ public class PlayerGUI {
     }
 
     public void draw(int col, int row, int tileSize) {
-        Circle circle = new Circle(tileSize, tileSize, (tileSize - 20) / 2 - 2);
+        Circle circle = new Circle(tileSize, tileSize, (0.8 *tileSize) / 2 );
         circle.setFill(color);
         circle.setStroke(color.darker());
         grid.setHalignment(circle, HPos.CENTER);
