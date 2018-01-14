@@ -27,6 +27,7 @@ public class OthelloController implements Initializable {
 
     private BoardGUI board;
     private GraphicUI gui;
+    private ScoreGUI scoreGUI;
 
     @FXML
     private AnchorPane root;
@@ -44,7 +45,7 @@ public class OthelloController implements Initializable {
         boolean whoStarts = true;
         if (!settings.getFirstPlayer().equals("X")) { whoStarts = false; }
 
-        ScoreGUI scoreGUI = new ScoreGUI(player1Color, player2Color);
+        scoreGUI = new ScoreGUI(player1Color, player2Color);
 
         this.board = new BoardGUI(new Board(settings.getSize()), player1Color, player2Color, whoStarts, scoreGUI);
         this.gui = new GraphicUI(board);
@@ -70,7 +71,7 @@ public class OthelloController implements Initializable {
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
             double boardNewWidth = newValue.doubleValue() - 120;
             board.setPrefWidth(boardNewWidth);
-
+            scoreGUI.setLayoutX(boardNewWidth);
             printFirstMoves(whoStarts);
         });
 
