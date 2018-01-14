@@ -1,6 +1,16 @@
 package othelloApp;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -9,9 +19,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
+import java.util.ArrayList;
 
 import static java.lang.System.exit;
 
@@ -19,48 +33,11 @@ import static java.lang.System.exit;
  * Created by Liora on 13-Jan-18.
  */
 public class WinScreen {
+    //private Button mainMenuButton;
+    //private Button quitButton;
     private double angle;
-    //private Sleeper sleeper;
 
     public WinScreen() { this.angle = 0; }
-
-    public void display(Stage stage, String text) {
-        Double change = new Double(0.01);
-        this.angle += change;
-        AnchorPane pane = new AnchorPane();
-        Scene scene = new Scene(pane, 520, 400);
-        scene.setFill(Color.BLACK);
-        Color color = Color.rgb(158, 18, 113);
-        pane.setStyle("-fx-background-color: rgb(255, 224, 251)");
-        //initPane(scene.getRoot());
-        for (int i = 0; i < 360; i += 9) {
-            Double x = new Double(250 + (170 * (Math.cos(i + this.angle))));
-            Double y = new Double(200 + (170 * (Math.sin(i + this.angle))));
-            int xp = x.intValue();
-            int yp = y.intValue();
-            Text star = new Text(xp, yp, "\u2606");
-            star.setFont(Font.font ("Arial", 30));
-            star.setStyle("-fx-font-weight: bold");
-            star.setFill(color);
-            pane.getChildren().add(star);
-        }
-        Text msg = new Text(135, 200, text);
-        msg.setFont(Font.font ("Arial", 40));
-        msg.setStyle("-fx-font-weight: bold");
-        msg.setFill(color);
-        pane.getChildren().add(msg);
-        stage.setScene(scene);
-        stage.show();
-    }
-    private void initPane(Pane pane) {
-        Button quit = new Button("Quit");
-        Button mainMenu = new Button("Main Menu");
-        quit.setOnAction(event -> { exit(1); });
-        final Stage stage = (Stage) pane.getScene().getWindow();
-        mainMenu.setOnAction(event -> { loadMainMenu(stage); });
-        pane.getChildren().add(quit);
-        pane.getChildren().add(mainMenu);
-    }
 
     final public void loadMainMenu(Stage stage) {
         try {
@@ -71,18 +48,68 @@ public class WinScreen {
             stage.show();
         } catch (Exception e) { System.out.println("Couldn't load main menu."); }
     }
-    public void displayScreen(Stage stage) {
-        int frameRate = 60;
-        int millisecondsPerFrame = 1000 / frameRate;
-        while (true) {
-            //long startTime = System.currentTimeMillis();
-            double dt = 1 / (double) (frameRate);
-            display(stage , "");
-            stage.show();
-            //this.surface.show(d);
-            //long usedTime = System.currentTimeMillis() - startTime;
-           // long milliSecondLeftToSleep = millisecondsPerFrame - usedTime;
-           // if (milliSecondLeftToSleep > 0) { this.sleeper.sleepFor(milliSecondLeftToSleep); }
+
+    public void displayScreen(Stage stage, String text) {
+        stage.setTitle("Animation");
+        Group root = new Group();
+        Scene scene = new Scene(root, 520, 400, Color.rgb(255, 224, 251));
+        scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+        stage.setScene(scene);
+        addStars(scene, text);
+        stage.show();
+    }
+
+    private void addStars(Scene scene, String text) {
+        ArrayList<Text> stars = new ArrayList<>();
+        final Group root = (Group) scene.getRoot();
+        addButtons(root, text);
+        for (int i = 0; i < 360; i += 9) {
+            Double x = new Double(250 + (170 * (Math.cos(angle + i))));
+            Double y = new Double(200 + (170 * (Math.sin(angle + i))));
+            int xp = x.intValue();
+            int yp = y.intValue();
+            Text star = new Text(xp, yp, "\u2606");
+            star.setFont(Font.font("Arial", 30));
+            stars.add(star);
+            root.getChildren().add(star);
         }
+        Timeline tl = new Timeline();
+        tl.setCycleCount(Animation.INDEFINITE);
+        KeyFrame moveBall = new KeyFrame(Duration.seconds(.02),
+                new EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent event) {
+                        Double change = new Double(0.01);
+                        angle += change;
+                        for (int i  = 0 ; i < 360; i += 9) {
+                            Double x = new Double(250 + (170 * (Math.cos(angle + i))));
+                            Double y = new Double(200 + (170 * (Math.sin(angle + i))));
+                            stars.get((i/9)).setX(x);
+                            stars.get((i/9)).setY(y);
+                        }
+                    }
+                });
+
+        tl.getKeyFrames().add(moveBall);
+        tl.play();
+    }
+
+    private void addButtons(Group root, String text) {
+        Text msg = new Text(135, 200, text);
+        msg.setFont(Font.font("Arial", 40));
+        msg.setStyle("-fx-font-weight: bold");
+        Color color = Color.rgb(158, 18, 113);
+        msg.setFill(color);
+        root.getChildren().add(msg);
+        Button quitButton = new Button("Quit");
+        quitButton.setLayoutX(480);
+        quitButton.setLayoutY(375);
+        Button mainMenuButton = new Button("Main Menu");
+        mainMenuButton.setLayoutX(0);
+        mainMenuButton.setLayoutY(375);
+        quitButton.setOnAction(event -> { exit(1); });
+        final Stage stage = (Stage) root.getScene().getWindow();
+        mainMenuButton.setOnAction(event -> { loadMainMenu(stage); });
+        root.getChildren().add(mainMenuButton);
+        root.getChildren().add(quitButton);
     }
 }

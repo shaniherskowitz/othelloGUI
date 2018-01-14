@@ -54,7 +54,7 @@ public class ScoreGUI extends GridPane {
         if (board.getOTiles() > board.getXTiles()) win = "Player 2 Won!";
         if (board.getXTiles() == board.getOTiles()) win = "IT'S A TIE!!!";
         WinScreen winScreen = new WinScreen();
-        winScreen.display((Stage) getScene().getWindow(), win);
+        winScreen.displayScreen((Stage) getScene().getWindow(), win);
         /*Text winner;
         Circle circle1 = new Circle(0, 0 , 10, player1Color);
         Circle circle2 = new Circle(0, 0 , 10, player2Color);

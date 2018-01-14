@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/othelloApp/GenericScene.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/othelloApp/winScreen.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/ScoreGUI.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/ScoreGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/MenuController.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/MenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/OthelloController.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/OthelloController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/Settings.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/Settings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/WinScreen.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/WinScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/menu.fxml" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/menu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/MenuController.java" afterPath="$PROJECT_DIR$/src/othelloApp/MenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" afterPath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/Main.java" afterPath="$PROJECT_DIR$/src/othelloApp/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/Settings.java" afterPath="$PROJECT_DIR$/src/othelloApp/Settings.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" afterPath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/board.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/board.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/menu.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/menu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/settings.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/settings.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,14 +69,14 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.9">
+    <splitter split-orientation="horizontal" split-proportion="0.6401254">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="settings.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/settings.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="160">
-                  <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+                <state relative-caret-position="200">
+                  <caret line="80" column="86" lean-forward="true" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
                   <folding />
                 </state>
               </provider>
@@ -89,12 +85,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="OthelloController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="OthelloController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="467">
-                  <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+                <state relative-caret-position="1440">
+                  <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GenericScene.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/othelloApp/GenericScene.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="367">
+                  <caret line="37" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -112,8 +120,8 @@
           <file leaf-file-name="ScoreGUI.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="740">
-                  <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+                <state relative-caret-position="80">
+                  <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -121,22 +129,22 @@
           </file>
           <file leaf-file-name="board.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
-              <provider editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
-              <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+              <provider editor-type-id="JavaFX-Scene-Builder">
                 <state />
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="WinScreen.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="WinScreen.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1620">
-                  <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+                <state relative-caret-position="287">
+                  <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -144,21 +152,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/othelloApp/app.css">
+          <file leaf-file-name="winScreen.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/othelloApp/winScreen.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="40">
-                  <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PlayerGUI.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+                <state relative-caret-position="180">
+                  <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -167,9 +165,11 @@
           <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="407">
-                  <caret line="160" column="9" lean-forward="true" selection-start-line="150" selection-start-column="8" selection-end-line="160" selection-end-column="9" />
-                  <folding />
+                <state relative-caret-position="47">
+                  <caret line="140" column="70" lean-forward="true" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -178,10 +178,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="193">
+                <state relative-caret-position="430">
                   <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -205,11 +205,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="300">
+                  <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -235,6 +235,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="FxmlFile" />
+        <option value="XSLT Stylesheet" />
         <option value="Class" />
       </list>
     </option>
@@ -255,10 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Player.java" />
-        <option value="$PROJECT_DIR$/src/Point.java" />
-        <option value="$PROJECT_DIR$/src/HumanPlayer.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/application.css" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/game/MazeBoardController.java" />
@@ -298,14 +295,18 @@
         <option value="$PROJECT_DIR$/src/othelloApp/howToPlay.txt" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
-        <option value="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
-        <option value="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
-        <option value="$PROJECT_DIR$/src/othelloApp/Main.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/menu.fxml" />
-        <option value="$PROJECT_DIR$/src/othelloApp/Settings.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/MenuController.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/board.fxml" />
         <option value="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
+        <option value="$PROJECT_DIR$/src/GenericScene.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/GenericScene.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/Settings.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/Sleeper.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/winScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/Main.java" />
       </list>
     </option>
   </component>
@@ -421,7 +422,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2016/ass5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2016/Ass7/ass7" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -704,6 +705,22 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="XSLT" factoryName="XSLT">
+      <option name="myOutputFile" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
+      <option name="myVmArguments" />
+      <option name="myWorkingDirectory" />
+      <option name="myModule" />
+      <option name="myJdk" />
+      <parameters />
+      <OutputType value="CONSOLE" save-to-file="false" />
+      <FileType name="XML" />
+      <JdkChoice value="FROM_MODULE" />
+      <method />
+    </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.ConsoleGame" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
@@ -760,7 +777,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -856,7 +873,7 @@
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="46" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -865,23 +882,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/othelloGame/GameLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloGame/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/beans/property/ReadOnlyDoublePropertyBase.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/beans/property/ReadOnlyDoubleWrapper.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/beans/property/DoublePropertyBase.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/scene/layout/Region.java" />
     <entry file="file://$PROJECT_DIR$/src/othelloGame/ConsoleUI.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1123,11 +1123,94 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../2016/Assignment4/src/BinaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/settings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="80" column="86" lean-forward="true" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GenericScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="37" column="5" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="140" column="70" lean-forward="true" selection-start-line="140" selection-start-column="70" selection-end-line="140" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/Sleeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1142,10 +1225,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/settings.fxml">
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/winScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="180">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1153,75 +1244,28 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="160" column="9" lean-forward="true" selection-start-line="150" selection-start-column="8" selection-end-line="160" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        <state relative-caret-position="80">
+          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+        <state relative-caret-position="287">
+          <caret line="103" column="32" lean-forward="false" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state relative-caret-position="300">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
           <folding />
         </state>
       </provider>

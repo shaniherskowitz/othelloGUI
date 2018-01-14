@@ -13,14 +13,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         try {
-
             AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             primaryStage.setTitle("Othello");
             primaryStage.setScene(scene);
             primaryStage.show();
-
 
         } catch (Exception e) {
             e.printStackTrace();

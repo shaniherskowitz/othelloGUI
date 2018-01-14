@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Settings implements Initializable{
+public class Settings implements Initializable {
     @FXML
     Button saveButton;
     @FXML
@@ -149,15 +149,13 @@ public class Settings implements Initializable{
     @FXML
     public void loadMainMenu() {
         try {
-            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            Stage stage = (Stage) this.cancelButton.getScene().getWindow();
             AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) { e.printStackTrace(); }
     }
 }
