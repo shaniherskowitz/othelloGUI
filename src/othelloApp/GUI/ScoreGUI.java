@@ -31,10 +31,9 @@ public class ScoreGUI extends GridPane {
         if (turn) current = player1Color;
         else current = player2Color;
         Circle circleTurn = new Circle(0, 0 , 12, current);
-        Text whosTurn = new Text("   Turn");
-        Text player1 = new Text("  Score: " + board.getXTiles());
-
-        Text player2 = new Text("  Score: " + board.getOTiles());
+        Text whosTurn = new Text("Turn");
+        Text player1 = new Text("Score: " + board.getXTiles());
+        Text player2 = new Text("Score: " + board.getOTiles());
         player1.setStyle("-fx-font: 16 Courier;");
         player2.setStyle("-fx-font: 16 Courier;");
         whosTurn.setStyle("-fx-font: 20 Courier;");

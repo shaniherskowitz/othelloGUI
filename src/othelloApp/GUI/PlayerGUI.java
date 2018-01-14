@@ -3,9 +3,12 @@ package othelloApp.GUI;
 
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
+import javafx.geometry.VPos;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import othelloGame.*;
 
 import java.util.List;
@@ -31,6 +34,11 @@ public class PlayerGUI {
         circle.setFill(color);
         circle.setStroke(color.darker());
         grid.setHalignment(circle, HPos.CENTER);
+        /*Text circle = new Text(tileSize, tileSize, 	"\u2665");
+        circle.setFont(Font.font(120));
+        circle.setFill(color);
+        grid.setHalignment(circle, HPos.CENTER);
+        grid.setValignment(circle, VPos.TOP);*/
         grid.add(circle, col, row);
         grid.getChildren().remove(circle);
         grid.add(circle, col, row);

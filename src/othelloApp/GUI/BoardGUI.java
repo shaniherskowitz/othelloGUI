@@ -29,7 +29,8 @@ public class BoardGUI extends GridPane {
 
     public BoardGUI(Board board, Color color1, Color color2, boolean whoStarts, ScoreGUI scoreGUI) {
         this.board = board;
-        this.tileSize = 50;
+        //this.tileSize = 50;
+        this.tileSize = (int) this.getPrefHeight()/ this.board.getSize();
         this.player1turn = whoStarts;
         this.player1 = new PlayerGUI(this, color1, Tile.X, this);
         this.player2 = new PlayerGUI(this, color2, Tile.O, this);
@@ -48,16 +49,11 @@ public class BoardGUI extends GridPane {
                 move = new Point((int) event.getY() / tileSize, (int) event.getX() / tileSize);
                 //System.out.println("mouse click detected! " + move.PointToString());
                 boolean check = current.Turn(new Move(move, 0));
-
                 List<Move> movesList1 = gl.getMovesList(getOtherPlayer().getSymbol(), getBoard());
-
                 if (check && !movesList1.isEmpty()) player1turn = !player1turn;
-
-
                 List<Move> movesList = gl.getMovesList(getCurrentPlayer().getSymbol(), getBoard());
                 gui.printMoves(getCurrentPlayer().getChar(), movesList);
                 if (board.boardFull() || noMoves()) score.declareWinner(board);
-
             }
         });
     }
@@ -84,17 +80,12 @@ public class BoardGUI extends GridPane {
 
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
-                Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(new Image("othelloApp/GUI/tile1.jpeg")));
+                Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(new Image("othelloApp/GUI/tile2.jpeg")));
                 rect.setStroke(Color.WHITE);
 
                 this.add(rect, j, i);
-                if (board.getBoard()[i][j] == Tile.X) {
-                    player1.draw(j, i, tileSize);
-
-                } else if (board.getBoard()[i][j] == Tile.O) {
-                    player2.draw(j, i, tileSize);
-                }
-
+                if (board.getBoard()[i][j] == Tile.X) { player1.draw(j, i, tileSize); }
+                else if (board.getBoard()[i][j] == Tile.O) { player2.draw(j, i, tileSize); }
             }
         }
         score.draw(board, player1turn);
