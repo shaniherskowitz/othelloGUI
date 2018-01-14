@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
@@ -59,8 +60,6 @@ public class Settings implements Initializable{
     }
 
     public void setToggleButtonColor() {
-       // startingPlayer1.setSelected(settings[1].equals("X"));
-       // startingPlayer2.setSelected(settings[1].equals("O"));
         Color color1 = colorPickerX.getValue();
         Color color2 = colorPickerY.getValue();
         String stringColor1 = "-fx-color: rgb(" + color1.getRed()*255 + ", "
@@ -144,23 +143,21 @@ public class Settings implements Initializable{
             writer.close();
         } catch (FileNotFoundException ex) { System.out.println("Unable to open settings");
         } catch (IOException ex) { System.out.println("Error reading settings"); }
-        endScene();
+        loadMainMenu();
     }
 
-    public void runSettingScene(Stage stage) {
+    @FXML
+    public void loadMainMenu() {
         try {
-            GridPane settingsPage = FXMLLoader.load(getClass().getResource("settings.fxml"));
-            Scene scene = new Scene(settingsPage, 520, 400);
+            Stage stage = (Stage) cancelButton.getScene().getWindow();
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
+            Scene scene = new Scene(root, 520, 400);
+            scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+            stage.setTitle("Othello");
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) { System.out.print("Exception in loading settings fxml"); }
-
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-    @FXML
-    public void endScene() {
-        Stage stage = (Stage) saveButton.getScene().getWindow();
-        stage.close();
-
-    }
-
 }

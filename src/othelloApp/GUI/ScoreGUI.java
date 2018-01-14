@@ -48,25 +48,30 @@ public class ScoreGUI extends GridPane {
     }
 
     public void declareWinner(Board board) {
-        Text winner;
+        String win = "";
+        this.getChildren().clear();
+        if (board.getXTiles() > board.getOTiles()) win = "Player 1 Won!";
+        if (board.getOTiles() > board.getXTiles()) win = "Player 2 Won!";
+        if (board.getXTiles() == board.getOTiles()) win = "IT'S A TIE!!!";
+        WinScreen winScreen = new WinScreen();
+        winScreen.display((Stage) getScene().getWindow(), win);
+        /*Text winner;
         Circle circle1 = new Circle(0, 0 , 10, player1Color);
         Circle circle2 = new Circle(0, 0 , 10, player2Color);
-        this.getChildren().clear();
         if (board.getXTiles() > board.getOTiles()) {
+            win = "Player 1 Won!";
             winner = new Text("  Winner!");
             this.add(circle1, 0, 5);
 
         } else if(board.getXTiles() < board.getOTiles()) {
+            win = "Player 2 Won!";
             winner = new Text("   Winner!");
             this.add(circle2, 0, 5);
         } else {
+            win = "IT'S A TIE!!!";
             winner = new Text("Tie!! ");
-        }
-        winner.setStyle("-fx-font: 18 Courier;");
-        this.add(winner, 0, 5);
-    }
-
-    private void runWinScreen(Runnable runnable) {
-        runnable.run();
+        }*/
+        //winner.setStyle("-fx-font: 18 Courier;");
+        //this.add(winner, 0, 5);
     }
 }
