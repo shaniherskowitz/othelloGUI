@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.MenuController">
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="othelloApp.MenuController">
    <children>
       <Button fx:id="settingsButton" layoutX="261.0" layoutY="250.0" mnemonicParsing="false" onAction="#settings" prefHeight="48.0" prefWidth="163.0" text="Settings">
          <font>
@@ -22,7 +22,7 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Button layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#howToPlay" prefHeight="48.0" prefWidth="163.0" text="How To Play">
+      <Button fx:id="howToPlayButton" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#howToPlay" prefHeight="48.0" prefWidth="163.0" text="How To Play">
          <font>
             <Font size="22.0" />
          </font>

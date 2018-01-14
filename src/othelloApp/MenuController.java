@@ -29,6 +29,8 @@ public class MenuController {
     private Button settingsButton;
     @FXML
     private Button startGameButton;
+    @FXML
+    private Button howToPlayButton;
 
     private Stage getStage(Button button) {
         return (Stage) button.getParent().getScene().getWindow();
@@ -60,13 +62,22 @@ public class MenuController {
     }
     @FXML
     protected void howToPlay() {
-        String textFile = getInstruction();
+        try {
+            stage = getStage(howToPlayButton);
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("howToPlay.fxml"));
+            Scene scene = new Scene(root, 520, 400);
+            scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+            stage.setTitle("How To Play");
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) { e.printStackTrace(); }
+        /*String textFile = getInstruction();
         Text text = new Text(textFile);
         TextFlow textFlow = new TextFlow(text);
         Scene scene = new Scene(textFlow, 520, 400);
         Stage stage = new Stage();
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
     private String getInstruction() {
         String fileName = "othelloApp/howToPlay.txt";
