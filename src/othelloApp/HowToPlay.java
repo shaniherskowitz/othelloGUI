@@ -9,9 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -19,10 +17,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import static java.lang.System.exit;
-
 /**
- * Created by Liora on 14-Jan-18.
+ * Defining a HowToPlay screen class.
  */
 public class HowToPlay implements Initializable {
 
@@ -33,13 +29,24 @@ public class HowToPlay implements Initializable {
     @FXML
     private AnchorPane root;
 
+    /**
+     * The HowToPlay default constructor.
+     */
     public HowToPlay() {}
 
+    /**
+     * The method initializes the HowToPlay class as the controller to HowToPlay FXML doc.
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         getInstruction();
     }
 
+    /**
+     * The method reads the game instructions from a documents and prints it to the screen.
+     */
     private void getInstruction() {
         String fileName = "othelloApp/howToPlay.txt";
         double height = 100;
@@ -61,11 +68,11 @@ public class HowToPlay implements Initializable {
         } catch (IOException ex) { System.out.println("Error reading how to play"); }
     }
 
+    /**
+     * The method loads the main menu screen and displays it.
+     */
     @FXML
-    protected void quit() { exit(1); }
-
-    @FXML
-    public void loadMainMenu() {
+    protected void loadMainMenu() {
         try {
             Stage stage = (Stage) this.mainMenuButton.getScene().getWindow();
             AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -77,8 +84,11 @@ public class HowToPlay implements Initializable {
         } catch (Exception e) { e.printStackTrace(); }
     }
 
+    /**
+     * The method loads the othello game, and starts the game/
+     */
     @FXML
-    public void startGame() {
+    protected void startGame() {
         try {
             Stage stage = (Stage) this.startGameButton.getScene().getWindow();
             AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("board.fxml"));

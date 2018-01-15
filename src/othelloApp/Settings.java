@@ -6,26 +6,26 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
+/**
+ * Defining a Settings class to control the game's setting.
+ */
 public class Settings implements Initializable {
+
     @FXML
     Button saveButton;
     @FXML
     Button cancelButton;
     @FXML
-    ColorPicker colorPickerX;
+    ColorPicker colorPicker1;
     @FXML
-    ColorPicker colorPickerY;
+    ColorPicker colorPicker2;
     @FXML
     ChoiceBox<Integer> cbSize;
     @FXML
@@ -33,35 +33,50 @@ public class Settings implements Initializable {
     @FXML
     ToggleButton startingPlayer2;
     @FXML
-    Rectangle circleX;
+    Rectangle rect1;
     @FXML
-    Rectangle circleY;
+    Rectangle rect2;
 
     private String[] settings = null;
-    private static String fileName = "othelloApp/gameSettings";
+    private final static String fileName = "othelloApp/gameSettings";
 
+    /**
+     * The Settings default constructor.
+     */
+    public Settings() {}
+
+    /**
+     * The Settings constructor.
+     * @param settings The given settings.
+     */
     private Settings(String[] settings) {
         this.settings = settings;
     }
 
-    public Settings() {}
-
+    /**
+     * The method initializes the Settings to be th controller for settings FXML.
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         updateSelf();
         cbSize.setValue(getSize());
         Color color1 = parseToColor(settings[2]);
         Color color2 = parseToColor(settings[3]);
-        colorPickerX.setValue(color1);
-        colorPickerY.setValue(color2);
-        circleX.setFill(color1);
-        circleY.setFill(color2);
+        colorPicker1.setValue(color1);
+        colorPicker2.setValue(color2);
+        rect1.setFill(color1);
+        rect2.setFill(color2);
         setToggleButtonColor();
     }
 
-    public void setToggleButtonColor() {
-        Color color1 = colorPickerX.getValue();
-        Color color2 = colorPickerY.getValue();
+    /**
+     * The method sets the toggle group button colors.
+     */
+    private void setToggleButtonColor() {
+        Color color1 = colorPicker1.getValue();
+        Color color2 = colorPicker2.getValue();
         String stringColor1 = "-fx-color: rgb(" + color1.getRed()*255 + ", "
                 + color1.getGreen()*255 + ", " + color1.getBlue()*255 + ")";
         String stringColor2 = "-fx-color: rgb(" + color2.getRed()*255 + ", "
@@ -70,18 +85,41 @@ public class Settings implements Initializable {
         startingPlayer2.setStyle(stringColor2);
     }
 
-    public void updateSelf() {
+    /**
+     * The method updates it's settings from file.
+     */
+    private void updateSelf() {
         this.settings = loadSettings().settings;
     }
 
+    /**
+     * The method returns the board size saved in the settings.
+     * @return The pref board size.
+     */
     public int getSize() { return Integer.parseInt(settings[0]); }
 
+    /**
+     * The method returns the starting player.
+     * @return The symbol of the starting player.
+     */
     public String getFirstPlayer() { return settings[1]; }
 
+    /**
+     * The method returns the first player's color.
+     * @return
+     */
     public Color getColorX() { return parseToColor(settings[2]); }
 
+    /**
+     * The method returns the second player's color.
+     * @return The seconds player's color.
+     */
     public Color getColorY() { return parseToColor(settings[3]); }
 
+    /**
+     * The static constructor for the Settings class.
+     * @return The loaded settings.
+     */
     public static Settings loadSettings() {
         try {
             String settings[] = new String[4];
@@ -96,6 +134,11 @@ public class Settings implements Initializable {
         return defaultSettings();
     }
 
+    /**
+     * The method parses a string to a color and returns it.
+     * @param color The string representation of the color.
+     * @return The new color.
+     */
     private static Color parseToColor(String color) {
         String [] rgb = color.split(" ");
         double r =Double.parseDouble(rgb[0]);
@@ -118,15 +161,15 @@ public class Settings implements Initializable {
     }
     @FXML
     public void setColorX() {
-        Color color = colorPickerX.getValue();
-        circleX.setFill(colorPickerX.getValue());
+        Color color = colorPicker1.getValue();
+        rect1.setFill(colorPicker1.getValue());
         settings[2] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
         setToggleButtonColor();
     }
     @FXML
     public void setColorY() {
-        Color color = colorPickerY.getValue();
-        circleY.setFill(colorPickerY.getValue());
+        Color color = colorPicker2.getValue();
+        rect2.setFill(colorPicker2.getValue());
         settings[3] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
         setToggleButtonColor();
     }

@@ -6,20 +6,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import othelloApp.GUI.BoardGUI;
 import othelloApp.GUI.GraphicUI;
 import othelloApp.GUI.ScoreGUI;
 import othelloGame.*;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import static java.lang.System.exit;
 
 /**
@@ -27,33 +22,15 @@ import static java.lang.System.exit;
  */
 public class OthelloController implements Initializable {
 
-    /**
-     * The game board GUI.
-     */
     private BoardGUI board;
-    /**
-     * The graphic GUI for the game logic.
-     */
     private GraphicUI gui;
-    /**
-     * The score GUI.
-     */
     private ScoreGUI scoreGUI;
 
     @FXML
-    /**
-     * The FXML root anchor pane.
-     */
     private AnchorPane root;
     @FXML
-    /**
-     * The FXML quit button.
-     */
     private Button quitButton;
     @FXML
-    /**
-     * The FXML mainMenu button.
-     */
     private Button mainMenuButton;
 
     /**
