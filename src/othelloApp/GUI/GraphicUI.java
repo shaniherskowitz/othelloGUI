@@ -1,5 +1,7 @@
 package othelloApp.GUI;
 
+import javafx.geometry.HPos;
+import javafx.scene.shape.Rectangle;
 import othelloGame.*;
 import java.util.List;
 
@@ -30,16 +32,16 @@ public class GraphicUI implements GameUI {
         board.getChildren().clear();
         board.updateBoard(board.getBoard());
         board.draw();
-        int height = (int) board.getPrefHeight();
-        int width = (int) board.getPrefHeight();
-        int cellHeight = height / board.getBoard().getSize();
-        int cellWidth = width / board.getBoard().getBoard()[0].length;
+        double size = board.getPrefHeight();
+        double cellSize = 0.8 * (size / board.getBoard().getSize());
 
         for (Move move : movesList) {
-            javafx.scene.shape.Rectangle rect;
-            rect = new javafx.scene.shape.Rectangle(cellWidth, cellHeight, board.getCurrentPlayer().getColor());
+            Rectangle rect;
+            rect = new Rectangle(cellSize, cellSize, board.getCurrentPlayer().getColor());
+            rect.setOpacity(0.5);
             rect.setX(move.getPoint().getX());
             rect.setY(move.getPoint().getY());
+            board.setHalignment(rect, HPos.CENTER);
             board.add(rect, move.getPoint().getY(), move.getPoint().getX());
         }
     }

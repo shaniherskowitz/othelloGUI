@@ -22,11 +22,16 @@ import static java.lang.System.exit;
 public class WinScreen {
 
     private double angle;
+    private Color color;
 
     /**
      * The WinScreen constructor.
+     * @param color The star color.
      */
-    public WinScreen() { this.angle = 0; }
+    public WinScreen(Color color) {
+        this.angle = 0;
+        this.color = color;
+    }
 
     /**
      * The method loads the main menu and displays it.
@@ -65,12 +70,17 @@ public class WinScreen {
     private void addStars(Scene scene, String text) {
         ArrayList<Text> stars = new ArrayList<>();
         final Group root = (Group) scene.getRoot();
+        Text mainStar = new Text(185, 280, "\u2606");
+        mainStar.setFont(Font.font("Arial", 160));
+        mainStar.setFill(color);
+        root.getChildren().add(mainStar);
         addButtons(root, text);
         for (int i = 0; i < 360; i += 9) {
             double xp = 250 + (170 * (Math.cos(angle + i)));
             double yp = 200 + (170 * (Math.sin(angle + i)));
             Text star = new Text(xp, yp, "\u2606");
             star.setFont(Font.font("Arial", 30));
+            star.setFill(color);
             stars.add(star);
             root.getChildren().add(star);
         }
@@ -96,7 +106,7 @@ public class WinScreen {
      * @param text The given text.
      */
     private void addButtons(Group root, String text) {
-        Text msg = new Text(135, 200, text);
+        Text msg = new Text(135, 150, text);
         msg.setFont(Font.font("Arial", 40));
         msg.setStyle("-fx-font-weight: bold");
         Color color = Color.rgb(158, 18, 113);

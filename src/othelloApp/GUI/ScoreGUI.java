@@ -25,7 +25,6 @@ public class ScoreGUI extends GridPane {
     public ScoreGUI(Color player1Color, Color player2Color) {
         this.player1Color = player1Color;
         this.player2Color = player2Color;
-
     }
 
     /**
@@ -34,8 +33,8 @@ public class ScoreGUI extends GridPane {
      * @param turn The player's turn.
      */
     public void draw(Board board, boolean turn) {
-        this.setVgap(10);
-        this.setPadding(new Insets(10, 10, 10, 6));
+        double padding = this.getWidth() / 10;
+        this.setPadding(new Insets(padding, padding, padding, 6));
         this.getChildren().clear();
         final int radius = 7;
         Circle circle1 = new Circle(radius, player1Color);
@@ -65,29 +64,18 @@ public class ScoreGUI extends GridPane {
      */
     public void declareWinner(Board board) {
         String win = "";
+        Color color = Color.BLACK;
         this.getChildren().clear();
-        if (board.getXTiles() > board.getOTiles()) win = "Player 1 Won!";
-        if (board.getOTiles() > board.getXTiles()) win = "Player 2 Won!";
-        if (board.getXTiles() == board.getOTiles()) win = "IT'S A TIE!!!";
-        WinScreen winScreen = new WinScreen();
-        winScreen.displayScreen((Stage) getScene().getWindow(), win);
-        /*Text winner;
-        Circle circle1 = new Circle(0, 0 , 10, player1Color);
-        Circle circle2 = new Circle(0, 0 , 10, player2Color);
         if (board.getXTiles() > board.getOTiles()) {
             win = "Player 1 Won!";
-            winner = new Text("  Winner!");
-            this.add(circle1, 0, 5);
-
-        } else if(board.getXTiles() < board.getOTiles()) {
+            color = player1Color;
+        }
+        if (board.getOTiles() > board.getXTiles()) {
             win = "Player 2 Won!";
-            winner = new Text("   Winner!");
-            this.add(circle2, 0, 5);
-        } else {
-            win = "IT'S A TIE!!!";
-            winner = new Text("Tie!! ");
-        }*/
-        //winner.setStyle("-fx-font: 18 Courier;");
-        //this.add(winner, 0, 5);
+            color = player2Color;
+        }
+        if (board.getXTiles() == board.getOTiles()) win = "  IT'S A TIE!!!";
+        WinScreen winScreen = new WinScreen(color);
+        winScreen.displayScreen((Stage) getScene().getWindow(), win);
     }
 }

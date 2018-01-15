@@ -94,9 +94,8 @@ public class BoardGUI extends GridPane {
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
                 Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(
-                        new Image("othelloApp/GUI/tile2.jpeg")));
+                        new Image("othelloApp/GUI/tile4.jpeg")));
                 rect.setStroke(Color.WHITE);
-
                 this.add(rect, j, i);
                 if (board.getBoard()[i][j] == Tile.X) { player1.draw(j, i, tileSize); }
                 else if (board.getBoard()[i][j] == Tile.O) { player2.draw(j, i, tileSize); }
