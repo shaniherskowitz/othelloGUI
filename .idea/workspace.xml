@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="othello" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile3.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/tile3.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/ScoreGUI.class" afterPath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/ScoreGUI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/GraphicUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/GraphicUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" afterPath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" afterPath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/board.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/board.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/gameSettings" afterPath="$PROJECT_DIR$/src/othelloApp/gameSettings" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -70,15 +73,14 @@
     <splitter split-orientation="horizontal" split-proportion="0.64226073">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="OthelloController.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="OthelloController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+                <state relative-caret-position="393">
+                  <caret line="60" column="33" lean-forward="false" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="docComment;method#initialize#0;class#OthelloController#0" expanded="false" />
-                    <element signature="method#initialize#0;class#OthelloController#0" expanded="false" />
                     <element signature="docComment;method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
                     <element signature="method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
                     <element signature="docComment;method#printFirstMoves#0;class#OthelloController#0" expanded="false" />
@@ -94,12 +96,11 @@
           <file leaf-file-name="BoardGUI.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="87" column="23" lean-forward="false" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
+                <state relative-caret-position="193">
+                  <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="docComment;method#BoardGUI#0;class#BoardGUI#0" expanded="false" />
-                    <element signature="method#BoardGUI#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#playerClick#0;class#BoardGUI#0" expanded="false" />
                     <element signature="method#playerClick#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#noMoves#0;class#BoardGUI#0" expanded="false" />
@@ -107,7 +108,6 @@
                     <element signature="docComment;method#load#0;class#BoardGUI#0" expanded="false" />
                     <element signature="method#load#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#draw#0;class#BoardGUI#0" expanded="false" />
-                    <element signature="method#draw#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#updateBoard#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#getBoard#0;class#BoardGUI#0" expanded="false" />
                     <element signature="docComment;method#mousePressEvent#0;class#BoardGUI#0" expanded="false" />
@@ -125,7 +125,7 @@
             <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/GraphicUI.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+                  <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="docComment;method#GraphicUI#0;class#GraphicUI#0" expanded="false" />
@@ -136,11 +136,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ScoreGUI.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ScoreGUI.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="245">
-                  <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+                <state relative-caret-position="201">
+                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="docComment;method#ScoreGUI#0;class#ScoreGUI#0" expanded="false" />
@@ -168,7 +168,7 @@
             <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="140">
-                  <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+                  <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
                   <folding>
                     <element signature="docComment;method#PlayerGUI#0;class#PlayerGUI#0" expanded="false" />
                     <element signature="method#PlayerGUI#0;class#PlayerGUI#0" expanded="false" />
@@ -187,11 +187,24 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="board.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="JavaFX-Scene-Builder">
+                <state />
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="WinScreen.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="260">
-                  <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+                  <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
                   <folding>
                     <element signature="docComment;method#WinScreen#0;class#WinScreen#0" expanded="false" />
                     <element signature="method#WinScreen#0;class#WinScreen#0" expanded="false" />
@@ -239,8 +252,9 @@
                 <state relative-caret-position="600">
                   <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
                   <folding>
-                    <element signature="imports" expanded="true" />
                     <element signature="docComment;method#getStage#0;class#MenuController#0" expanded="false" />
+                    <element signature="e#694#695#0" expanded="false" />
+                    <element signature="e#766#767#0" expanded="false" />
                     <element signature="docComment;method#settings#0;class#MenuController#0" expanded="false" />
                     <element signature="method#settings#0;class#MenuController#0" expanded="false" />
                     <element signature="docComment;method#startGame#0;class#MenuController#0" expanded="false" />
@@ -339,8 +353,8 @@
           <file leaf-file-name="HumanPlayer.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/othelloGame/HumanPlayer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+                <state relative-caret-position="228">
+                  <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
                   <folding />
                 </state>
               </provider>
@@ -430,8 +444,6 @@
         <option value="$PROJECT_DIR$/src/othelloApp/app.css" />
         <option value="$PROJECT_DIR$/src/othelloApp/howToPlay.fxml" />
         <option value="$PROJECT_DIR$/src/othelloApp/howToPlay.txt" />
-        <option value="$PROJECT_DIR$/src/othelloApp/board.fxml" />
-        <option value="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/HowToPlay.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/settings.fxml" />
         <option value="$PROJECT_DIR$/src/othelloApp/Settings.java" />
@@ -439,17 +451,20 @@
         <option value="$PROJECT_DIR$/src/othelloApp/MenuController.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java" />
-        <option value="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/GraphicUI.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/board.fxml" />
+        <option value="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="16" />
-    <option name="width" value="1904" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
@@ -477,7 +492,7 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGUI" />
+              <option name="myItemId" value="othello" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -487,21 +502,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGUI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGUI" />
+              <option name="myItemId" value="othello" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -512,14 +513,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othelloApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGUI" />
+              <option name="myItemId" value="othello" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -534,8 +531,40 @@
               <option name="myItemId" value="othelloApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="GUI" />
+              <option name="myItemId" value="othello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othelloGUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othelloGUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othello" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,6 +586,9 @@
     <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2016/Ass7/ass7" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -899,7 +931,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="0" width="1904" height="1080" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -912,13 +944,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26732674" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27457628" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32905138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3520352" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35141242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15472312" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208112" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -981,7 +1013,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="54" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -990,7 +1022,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java" />
     <entry file="file://$PROJECT_DIR$/src/othelloGame/RegularGameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1140,6 +1171,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1204,7 +1236,7 @@
         <state relative-caret-position="1940">
           <caret line="213" column="5" lean-forward="true" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="docComment;method#Settings#0;class#Settings#0" expanded="false" />
             <element signature="docComment;method#Settings#1;class#Settings#0" expanded="false" />
             <element signature="docComment;method#initialize#0;class#Settings#0" expanded="false" />
@@ -1273,8 +1305,9 @@
         <state relative-caret-position="600">
           <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#getStage#0;class#MenuController#0" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
             <element signature="docComment;method#settings#0;class#MenuController#0" expanded="false" />
             <element signature="method#settings#0;class#MenuController#0" expanded="false" />
             <element signature="docComment;method#startGame#0;class#MenuController#0" expanded="false" />
@@ -1357,37 +1390,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloGame/HumanPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="35" column="40" lean-forward="false" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="28" lean-forward="false" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#initialize#0;class#OthelloController#0" expanded="false" />
-            <element signature="method#initialize#0;class#OthelloController#0" expanded="false" />
-            <element signature="docComment;method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
-            <element signature="method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
-            <element signature="docComment;method#printFirstMoves#0;class#OthelloController#0" expanded="false" />
-            <element signature="method#printFirstMoves#0;class#OthelloController#0" expanded="false" />
-            <element signature="docComment;method#quit#0;class#OthelloController#0" expanded="false" />
-            <element signature="docComment;method#loadMainMenu#0;class#OthelloController#0" expanded="false" />
-            <element signature="method#loadMainMenu#0;class#OthelloController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <element signature="docComment;method#WinScreen#0;class#WinScreen#0" expanded="false" />
             <element signature="method#WinScreen#0;class#WinScreen#0" expanded="false" />
@@ -1403,49 +1409,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="87" column="23" lean-forward="false" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#BoardGUI#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#BoardGUI#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#playerClick#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#playerClick#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#noMoves#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#noMoves#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#load#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#load#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#draw#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#draw#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#updateBoard#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#getBoard#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#mousePressEvent#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#mousePressEvent#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#getCurrentPlayer#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#getCurrentPlayer#0;class#BoardGUI#0" expanded="false" />
-            <element signature="docComment;method#getOtherPlayer#0;class#BoardGUI#0" expanded="false" />
-            <element signature="method#getOtherPlayer#0;class#BoardGUI#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding>
             <element signature="docComment;method#PlayerGUI#0;class#PlayerGUI#0" expanded="false" />
             <element signature="method#PlayerGUI#0;class#PlayerGUI#0" expanded="false" />
@@ -1466,7 +1433,7 @@
     <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/GraphicUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#GraphicUI#0;class#GraphicUI#0" expanded="false" />
@@ -1478,8 +1445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="201">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#ScoreGUI#0;class#ScoreGUI#0" expanded="false" />
@@ -1492,5 +1459,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloGame/HumanPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exe/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#BoardGUI#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#playerClick#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#playerClick#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#noMoves#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#noMoves#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#load#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#load#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#draw#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#updateBoard#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#getBoard#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#mousePressEvent#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#mousePressEvent#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#getCurrentPlayer#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#getCurrentPlayer#0;class#BoardGUI#0" expanded="false" />
+            <element signature="docComment;method#getOtherPlayer#0;class#BoardGUI#0" expanded="false" />
+            <element signature="method#getOtherPlayer#0;class#BoardGUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/board.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="60" column="33" lean-forward="false" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#initialize#0;class#OthelloController#0" expanded="false" />
+            <element signature="docComment;method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
+            <element signature="method#updateScreenSize#0;class#OthelloController#0" expanded="false" />
+            <element signature="docComment;method#printFirstMoves#0;class#OthelloController#0" expanded="false" />
+            <element signature="method#printFirstMoves#0;class#OthelloController#0" expanded="false" />
+            <element signature="docComment;method#quit#0;class#OthelloController#0" expanded="false" />
+            <element signature="docComment;method#loadMainMenu#0;class#OthelloController#0" expanded="false" />
+            <element signature="method#loadMainMenu#0;class#OthelloController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>othello</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>othello</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

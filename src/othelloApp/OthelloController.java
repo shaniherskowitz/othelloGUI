@@ -40,30 +40,26 @@ public class OthelloController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         Settings settings = Settings.loadSettings();
         Color player1Color = settings.getColorX();
         Color player2Color = settings.getColorY();
         boolean whoStarts = true;
         if (!settings.getFirstPlayer().equals("X")) { whoStarts = false; }
-
         scoreGUI = new ScoreGUI(player1Color, player2Color);
-
         this.board = new BoardGUI(new Board(settings.getSize()), player1Color, player2Color, whoStarts, scoreGUI);
+        final int boardSize = 400;
         this.gui = new GraphicUI(board);
-        board.setPrefWidth(400);
-        board.setPrefHeight(400);
+        board.setPrefWidth(boardSize);
+        board.setPrefHeight(boardSize);
         root.getChildren().add(board);
         printFirstMoves(whoStarts);
         board.draw();
 
-        scoreGUI.setLayoutX(410);
-        scoreGUI.setLayoutY(0);
-        scoreGUI.setPrefWidth(40);
-        scoreGUI.setPrefHeight(20);
-        root.getChildren().add(1, scoreGUI);
+        scoreGUI.setTranslateX(20);
+        mainMenuButton.setTranslateX(20);
+        quitButton.setLayoutX(20);
+        root.getChildren().add(scoreGUI);
         scoreGUI.draw(board.getBoard(), true);
-
         updateScreenSize(whoStarts);
     }
 

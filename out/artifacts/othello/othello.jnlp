@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="othello.jnlp">
+  <information>
+    <title>othello</title>
+    <vendor>Unknown</vendor>
+    <description>othello</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="othello.jar" size="4960227" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="520" height="400" main-class="othelloApp\Main"  name="othello" />
+  <update check="background"/>
+</jnlp>
