@@ -9,18 +9,30 @@ import javafx.stage.Stage;
 import othelloApp.WinScreen;
 import othelloGame.Board;
 
-
+/**
+ * Defining a ScoreGUI class to present the score in application.
+ */
 public class ScoreGUI extends GridPane {
+
     private Color player1Color;
     private Color player2Color;
 
-
+    /**
+     * The SCoreGUI's constructor.
+     * @param player1Color The first player's color.
+     * @param player2Color The second player's color.
+     */
     public ScoreGUI(Color player1Color, Color player2Color) {
         this.player1Color = player1Color;
         this.player2Color = player2Color;
 
     }
 
+    /**
+     * The method draws the score on the screen.
+     * @param board The game board.
+     * @param turn The player's turn.
+     */
     public void draw(Board board, boolean turn) {
         this.setVgap(10);
         this.setPadding(new Insets(10, 10, 10, 6));
@@ -46,6 +58,10 @@ public class ScoreGUI extends GridPane {
         this.add(player2, 0, 10);
     }
 
+    /**
+     * The method declares the winner, and displays the winScreen.
+     * @param board The game board.
+     */
     public void declareWinner(Board board) {
         String win = "";
         this.getChildren().clear();

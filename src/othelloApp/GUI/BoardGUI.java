@@ -1,23 +1,20 @@
 package othelloApp.GUI;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.image.*;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import othelloGame.*;
 import othelloGame.Point;
-
-import java.awt.*;
 import java.util.List;
 
-
+/**
+ * Defining a BoardGUI class to represent the game board.
+ */
 public class BoardGUI extends GridPane {
+
     private Board board;
     private Point move;
     private int tileSize;
@@ -26,10 +23,16 @@ public class BoardGUI extends GridPane {
     private PlayerGUI player2;
     private ScoreGUI score;
 
-
+    /**
+     * The BoardGUI's constructor.
+     * @param board The game's board.
+     * @param color1 The first player's color.
+     * @param color2 The second player's color.
+     * @param whoStarts The boolean value to determine the player who starts the game.
+     * @param scoreGUI The score GUI.
+     */
     public BoardGUI(Board board, Color color1, Color color2, boolean whoStarts, ScoreGUI scoreGUI) {
         this.board = board;
-        //this.tileSize = 50;
         this.tileSize = (int) this.getPrefHeight()/ this.board.getSize();
         this.player1turn = whoStarts;
         this.player1 = new PlayerGUI(this, color1, Tile.X, this);
@@ -39,12 +42,13 @@ public class BoardGUI extends GridPane {
         playerClick();
     }
 
-    void playerClick() {
+    /**
+     * The method defines an event handler for game turns.
+     */
+    private void playerClick() {
         GameLogic gl = new RegularGameLogic();
         GraphicUI gui = new GraphicUI(this);
-        this.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
+        this.setOnMousePressed(event -> {
                 PlayerGUI current = getCurrentPlayer();
                 move = new Point((int) event.getY() / tileSize, (int) event.getX() / tileSize);
                 //System.out.println("mouse click detected! " + move.PointToString());
@@ -54,10 +58,13 @@ public class BoardGUI extends GridPane {
                 List<Move> movesList = gl.getMovesList(getCurrentPlayer().getSymbol(), getBoard());
                 gui.printMoves(getCurrentPlayer().getChar(), movesList);
                 if (board.boardFull() || noMoves()) score.declareWinner(board);
-            }
         });
     }
 
+    /**
+     * The method returns true if the player has no moves, and else false.
+     * @return
+     */
     private boolean noMoves() {
         GameLogic gl = new RegularGameLogic();
         List<Move> movesList1 = gl.getMovesList(player1.getSymbol(), getBoard());
@@ -65,13 +72,19 @@ public class BoardGUI extends GridPane {
         return (movesList1.isEmpty() && movesList2.isEmpty());
     }
 
-    public void load() {
+    /**
+     * The method reloads itself from FXML as board GUI.
+     */
+    private void load() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         this.draw();
     }
 
+    /**
+     * The method draws the board.
+     */
     public void draw() {
         this.getChildren().clear();
 
@@ -91,25 +104,44 @@ public class BoardGUI extends GridPane {
         score.draw(board, player1turn);
     }
 
+    /**
+     * The method updates the game board object with a given game board.
+     * @param board THe given game board.
+     */
     public void updateBoard(Board board) {
         this.board = board;
     }
 
+    /**
+     * The method returns the game board.
+     * @return The game board.
+     */
     public Board getBoard() {
         return this.board;
     }
 
-
+    /**
+     * The method returns the move given a mouse press event.
+     * @return The appropriate move.
+     */
     public Move mousePressEvent() {
         if (move == null || move.getX() < 0 || move.getY() < 0) move = new Point(-5, -5);
         return new Move(move);
     }
 
+    /**
+     * The method returns the player with the current turn.
+     * @return The player with the current turn.
+     */
     public PlayerGUI getCurrentPlayer() {
         if (player1turn) return player1;
         return player2;
     }
 
+    /**
+     * The method returns the player which isn't his turn.
+     * @return The player which isn't his turn.
+     */
     public PlayerGUI getOtherPlayer() {
         if (!player1turn) return player1;
         return player2;
