@@ -4,6 +4,7 @@ package othelloApp.GUI;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -30,15 +31,16 @@ public class PlayerGUI {
     }
 
     public void draw(int col, int row, int tileSize) {
+        DropShadow dropShadow = new DropShadow();
+        dropShadow.setRadius(5.0);
+        dropShadow.setOffsetX(3.0);
+        dropShadow.setOffsetY(3.0);
+        dropShadow.setColor(Color.color(0.4, 0.5, 0.5));
         Circle circle = new Circle(tileSize, tileSize, (0.8 *tileSize) / 2 );
+        circle.setEffect(dropShadow);
         circle.setFill(color);
         circle.setStroke(color.darker());
         grid.setHalignment(circle, HPos.CENTER);
-        /*Text circle = new Text(tileSize, tileSize, 	"\u2665");
-        circle.setFont(Font.font(120));
-        circle.setFill(color);
-        grid.setHalignment(circle, HPos.CENTER);
-        grid.setValignment(circle, VPos.TOP);*/
         grid.add(circle, col, row);
         grid.getChildren().remove(circle);
         grid.add(circle, col, row);

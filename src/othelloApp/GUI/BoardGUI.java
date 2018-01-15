@@ -93,7 +93,8 @@ public class BoardGUI extends GridPane {
 
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
-                Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(new Image("othelloApp/GUI/tile2.jpeg")));
+                Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(
+                        new Image("othelloApp/GUI/tile2.jpeg")));
                 rect.setStroke(Color.WHITE);
 
                 this.add(rect, j, i);
