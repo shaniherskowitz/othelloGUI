@@ -22,20 +22,45 @@ import java.util.ResourceBundle;
 
 import static java.lang.System.exit;
 
-
+/**
+ * Defining the OthelloController class to control the game GUI's.
+ */
 public class OthelloController implements Initializable {
 
+    /**
+     * The game board GUI.
+     */
     private BoardGUI board;
+    /**
+     * The graphic GUI for the game logic.
+     */
     private GraphicUI gui;
+    /**
+     * The score GUI.
+     */
     private ScoreGUI scoreGUI;
 
     @FXML
+    /**
+     * The FXML root anchor pane.
+     */
     private AnchorPane root;
     @FXML
+    /**
+     * The FXML quit button.
+     */
     private Button quitButton;
     @FXML
+    /**
+     * The FXML mainMenu button.
+     */
     private Button mainMenuButton;
 
+    /**
+     * The method initializes the FXML the OthelloController controls.
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -63,9 +88,12 @@ public class OthelloController implements Initializable {
         scoreGUI.draw(board.getBoard(), true);
 
         updateScreenSize(whoStarts);
-
-
     }
+
+    /**
+     * The method adds listeners to the screen size.
+     * @param whoStarts The boolean value which determines which player starts.
+     */
     private void updateScreenSize(boolean whoStarts) {
 
         root.widthProperty().addListener((observable, oldValue, newValue) -> {
@@ -82,32 +110,39 @@ public class OthelloController implements Initializable {
             printFirstMoves(whoStarts);
         });
     }
+
+    /**
+     * The method prints the starting player's move.
+     * @param whoStarts The starting player boolean value.
+     */
     private void printFirstMoves(boolean whoStarts) {
         GameLogic gl = new RegularGameLogic();
-        if (whoStarts) {
-            List<Move> movesList = gl.getMovesList(Tile.X, board.getBoard());
-            gui.printMoves('X', movesList);
-        } else {
-            List<Move> movesList = gl.getMovesList(Tile.O, board.getBoard());
-            gui.printMoves('O', movesList);
-        }
+        Tile tile = Tile.X;
+        char symbol = 'X';
+        if (!whoStarts) { tile = Tile.O; symbol = 'O'; }
+        List<Move> movesList = gl.getMovesList(tile, board.getBoard());
+        gui.printMoves(symbol, movesList);
     }
 
+    /**
+     * The method quits the game.
+     */
     @FXML
     protected void quit() { exit(1); }
 
+    /**
+     * The method loads the main menu and displays it.
+     */
     @FXML
     protected void loadMainMenu() {
         try {
             Stage stage = (Stage) mainMenuButton.getScene().getWindow();
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        } catch (Exception e) { e.printStackTrace(); }
     }
 }
