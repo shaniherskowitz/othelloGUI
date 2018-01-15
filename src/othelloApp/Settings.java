@@ -147,6 +147,10 @@ public class Settings implements Initializable {
         return Color.color(r, g, b);
     }
 
+    /**
+     * The static constructor for default settings.
+     * @return The settings created.
+     */
     public static Settings defaultSettings() {
         String[] settings = new String[4];
         settings[0] = "8";
@@ -155,31 +159,51 @@ public class Settings implements Initializable {
         settings[3] = "0.0 0.1 0.0";
         return new Settings(settings);
     }
+
+    /**
+     * The method sets the board size in setting, based on FXML choice box.
+     */
     @FXML
-    public void setSize() {
+    protected void setSize() {
         settings[0] = Integer.toString(cbSize.getValue());
     }
+
+    /**
+     * The method sets the color of player1 based on color picker.
+     */
     @FXML
-    public void setColorX() {
+    protected void setColorX() {
         Color color = colorPicker1.getValue();
         rect1.setFill(colorPicker1.getValue());
         settings[2] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
         setToggleButtonColor();
     }
+
+    /**
+     * The method sets the color of player2 based on color picker.
+     */
     @FXML
-    public void setColorY() {
+    protected void setColorY() {
         Color color = colorPicker2.getValue();
         rect2.setFill(colorPicker2.getValue());
         settings[3] = color.getRed() + " " + color.getGreen() + " " + color.getBlue();
         setToggleButtonColor();
     }
+
+    /**
+     * The method sets the first player who's playing based on the toggle button.
+     */
     @FXML
-    public void setFirstPlayer() {
+    protected void setFirstPlayer() {
         if (startingPlayer1.isSelected()) { settings[1] = "X"; }
         if (startingPlayer2.isSelected()) { settings[1] = "O"; }
     }
+
+    /**
+     * The method saves the settings array to file, and returns to main menu.
+     */
     @FXML
-    public void saveSettings() {
+    protected void saveSettings() {
         try {
             PrintWriter writer = new PrintWriter((fileName), "utf-8");
             for (String line : settings) { writer.println(line); }
@@ -189,11 +213,14 @@ public class Settings implements Initializable {
         loadMainMenu();
     }
 
+    /**
+     * The method loads the main menu, and display it.
+     */
     @FXML
-    public void loadMainMenu() {
+    protected void loadMainMenu() {
         try {
             Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");

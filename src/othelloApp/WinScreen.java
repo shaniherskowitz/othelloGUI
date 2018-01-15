@@ -2,46 +2,39 @@ package othelloApp;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
-import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.util.ArrayList;
-
 import static java.lang.System.exit;
 
 /**
- * Created by Liora on 13-Jan-18.
+ * Defining a WinScreen class to display the winner at the end of the game.
  */
 public class WinScreen {
-    //private Button mainMenuButton;
-    //private Button quitButton;
+
     private double angle;
 
+    /**
+     * The WinScreen constructor.
+     */
     public WinScreen() { this.angle = 0; }
 
-    final public void loadMainMenu(Stage stage) {
+    /**
+     * The method loads the main menu and displays it.
+     * @param stage The stage on which would be displayed.
+     */
+    private void loadMainMenu(Stage stage) {
         try {
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setScene(scene);
@@ -49,6 +42,11 @@ public class WinScreen {
         } catch (Exception e) { System.out.println("Couldn't load main menu."); }
     }
 
+    /**
+     * The method defines the root group and scene of the winScreen.
+     * @param stage The stage on which winScreen would be displayed.
+     * @param text The text winScreen should display.
+     */
     public void displayScreen(Stage stage, String text) {
         stage.setTitle("Animation");
         Group root = new Group();
@@ -59,15 +57,18 @@ public class WinScreen {
         stage.show();
     }
 
+    /**
+     * The method adds the stars to animation, and plays it.
+     * @param scene The scene the animation will run on.
+     * @param text The text the animation should display.
+     */
     private void addStars(Scene scene, String text) {
         ArrayList<Text> stars = new ArrayList<>();
         final Group root = (Group) scene.getRoot();
         addButtons(root, text);
         for (int i = 0; i < 360; i += 9) {
-            Double x = new Double(250 + (170 * (Math.cos(angle + i))));
-            Double y = new Double(200 + (170 * (Math.sin(angle + i))));
-            int xp = x.intValue();
-            int yp = y.intValue();
+            double xp = 250 + (170 * (Math.cos(angle + i)));
+            double yp = 200 + (170 * (Math.sin(angle + i)));
             Text star = new Text(xp, yp, "\u2606");
             star.setFont(Font.font("Arial", 30));
             stars.add(star);
@@ -75,24 +76,25 @@ public class WinScreen {
         }
         Timeline tl = new Timeline();
         tl.setCycleCount(Animation.INDEFINITE);
-        KeyFrame moveBall = new KeyFrame(Duration.seconds(.02),
-                new EventHandler<ActionEvent>() {
-                    public void handle(ActionEvent event) {
-                        Double change = new Double(0.01);
+        KeyFrame moveBall = new KeyFrame(Duration.seconds(.02),event -> {
+                        double change = 0.01;
                         angle += change;
                         for (int i  = 0 ; i < 360; i += 9) {
-                            Double x = new Double(250 + (170 * (Math.cos(angle + i))));
-                            Double y = new Double(200 + (170 * (Math.sin(angle + i))));
+                            double x = 250 + (170 * (Math.cos(angle + i)));
+                            double y = 200 + (170 * (Math.sin(angle + i)));
                             stars.get((i/9)).setX(x);
                             stars.get((i/9)).setY(y);
                         }
-                    }
-                });
-
+        });
         tl.getKeyFrames().add(moveBall);
         tl.play();
     }
 
+    /**
+     * The method adds buttons and text to root scene animation.
+     * @param root The scene's root.
+     * @param text The given text.
+     */
     private void addButtons(Group root, String text) {
         Text msg = new Text(135, 200, text);
         msg.setFont(Font.font("Arial", 40));

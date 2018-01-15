@@ -77,6 +77,9 @@ public class MenuController {
         } catch (Exception e) { e.printStackTrace(); }
     }
 
+    /**
+     * The method exits the application.
+     */
     @FXML
     protected void quit() { exit(1); }
 }
