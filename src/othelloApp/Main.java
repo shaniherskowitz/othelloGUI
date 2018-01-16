@@ -22,7 +22,7 @@ public class Main extends Application {
         try {
             AnchorPane root = FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
-            scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("files/app.css").toExternalForm());
             primaryStage.setTitle("Othello");
             primaryStage.setScene(scene);
             primaryStage.show();

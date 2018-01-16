@@ -41,7 +41,7 @@ public class WinScreen {
         try {
             AnchorPane root = FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
-            scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("files/app.css").toExternalForm());
             stage.setScene(scene);
             stage.show();
         } catch (Exception e) { System.out.println("Couldn't load main menu."); }
@@ -56,7 +56,7 @@ public class WinScreen {
         stage.setTitle("Animation");
         Group root = new Group();
         Scene scene = new Scene(root, 520, 400, Color.rgb(255, 224, 251));
-        scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("files/app.css").toExternalForm());
         stage.setScene(scene);
         addStars(scene, text);
         stage.show();
