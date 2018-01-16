@@ -1,0 +1,274 @@
+C:\Users\Liora\Documents\Ass2\othelloGUI>git log
+commit 8e2ba3f76faca8fadb2469977e825ffd2d1a8596 (HEAD -> master, origin/master, origin/HEAD)
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 23:33:38 2018 +0200
+
+    more graphic changes
+
+commit 2334080ad8f759db1ddc7d2c7dd220d525d33621
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 21:20:48 2018 +0200
+
+    more comments and style changes
+
+commit 6b09f3335d38d9eaf31f5a232d9fb058e0dd782d
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 20:54:33 2018 +0200
+
+    did more comments
+
+commit dac8241ddae14b856a788b8093d84f0741ce1fea
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 20:04:45 2018 +0200
+
+    finished comments
+
+commit 5b30a452a79761a1d5e524bd12e1b5bd3fc39ff6
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 13:57:47 2018 +0200
+
+    more comments
+
+commit 0f948c0d071658721865ee92b3067979888b89a3
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 15 13:35:07 2018 +0200
+
+    comments for othello controller
+
+commit e044ef9c6f43bb952734de17915740a4c1c4dfe7
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 23:39:10 2018 +0200
+
+    made the game should support different screen sizes, the tiles should change accordingly
+
+commit 33896f4ba56c99e11d2bd081bc3421fb6a32ff22
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 23:23:05 2018 +0200
+
+    made scoregui show when larger screen
+
+commit cf7590767733260184b6ef1b3b0a18ad634664c9
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 23:09:53 2018 +0200
+
+    board szie change
+
+commit 2d5340887e6bd8f982ac19fc5863a114c75f4cfb
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 21:06:36 2018 +0200
+
+    uppdaing changes
+
+commit 7ba7e0c4897ee42671182153416df551bba47721
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 20:04:12 2018 +0200
+
+    fixed how to play
+
+commit 0880385c929bb21f44d1b22656a7d84fd5b42e7a
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 17:51:12 2018 +0200
+
+    start design on how to play
+
+commit 59adbc93eefb5ca5d94097f0b41e4d1f5a4e4fac
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 15:56:37 2018 +0200
+
+    added win screen!
+
+commit 01232763d0db1660de1875905820a58ec8c008a6
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 02:22:36 2018 +0200
+
+    more gui changes
+
+commit 43a5742509a92c986d106c4fe066e569278426f5
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sun Jan 14 00:00:13 2018 +0200
+
+    lots of graphic changes
+
+commit 37caceb24520e81cc6c918529e582e405d48bc84
+Author: LioraZ <liorazr@gmail.com>
+Date:   Sat Jan 13 20:26:00 2018 +0200
+
+    made toggle button work
+
+commit f4110459569b4e085ff594f2100ea069d192e70e
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Fri Jan 12 13:46:29 2018 +0200
+
+    fixed settings
+
+commit 102b8a853f44a0ef12a2640e836f052a95aad290
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Fri Jan 12 01:18:49 2018 +0200
+
+    added color swatchs next to players
+
+commit 4b182ceaa8c4db134922f2eac3f5c4e38239a34c
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Fri Jan 12 00:30:50 2018 +0200
+
+    added main menu
+
+commit a6772c2929629038609133a15486cdcf45aa27b9
+Merge: fa235f8 a2ad863
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Thu Jan 11 23:45:26 2018 +0200
+
+    latest
+
+commit fa235f88b171fd07a7bdb58740f7fe0579805ad7
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Thu Jan 11 18:05:56 2018 +0200
+
+    color changes
+
+commit a2ad863bb35c73ce5c922f7875ecede0acfd5952
+Author: LioraZ <liorazr@gmail.com>
+Date:   Thu Jan 11 18:05:46 2018 +0200
+
+    more setting changes
+
+commit dd4d2c1d24e1ae346a9830b4539dc5ed694059b1
+Author: LioraZ <liorazr@gmail.com>
+Date:   Thu Jan 11 17:41:25 2018 +0200
+
+    incorporated settings to game
+
+commit 6ff3e24d522616e8f7bec7816992d4e0bc441c9e
+Merge: 353aa8c 767baaa
+Author: LioraZ <liorazr@gmail.com>
+Date:   Thu Jan 11 16:32:45 2018 +0200
+
+    merge
+
+commit 353aa8cdc2d4e5750a366032d8e8ce46afdc5ec2
+Author: LioraZ <liorazr@gmail.com>
+Date:   Thu Jan 11 02:34:35 2018 +0200
+
+    created settings
+
+commit 767baaa600b8ad33f4c5e3f1c51f0ae1a1bf17a1
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Thu Jan 11 01:18:37 2018 +0200
+
+    game part works
+
+commit 6dd81b2a05e49650cb4747f03247bbea44b0b8a4
+Author: LioraZ <liorazr@gmail.com>
+Date:   Tue Jan 9 22:43:27 2018 +0200
+
+    settings commit
+
+commit 72a27b10d7a4221ee4d9bac6c8c996bf6704be33
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Tue Jan 9 14:49:03 2018 +0200
+
+    game works but not in correct way, board expands
+
+commit 38d56d3dedcd2876b640d2ecd33b7ea8a36dedaa
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Tue Jan 9 13:14:40 2018 +0200
+
+    click works
+
+commit d3936e4d9d8698cf80ae6f6867417aa8fedd7483
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Tue Jan 9 08:54:58 2018 +0200
+
+    -
+
+commit b392e853dda23f1d07c5954ad23c1515a913a155
+Merge: c3dde5e 6d85cb5
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Tue Jan 9 08:41:27 2018 +0200
+
+    -
+
+commit c3dde5ec9af63bb01edb155fd84d159fe220cb3f
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Tue Jan 9 08:37:30 2018 +0200
+
+    -
+
+commit 6d85cb57f59fadf245fff8d9be028b2371f345e8
+Author: LioraZ <liorazr@gmail.com>
+Date:   Tue Jan 9 02:26:39 2018 +0200
+
+    trying to make game start
+
+commit 821f80d92d93e81f825eba3db2e102330a0c6066
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Mon Jan 8 19:00:35 2018 +0200
+
+    some changes
+
+commit 30b56ab44abf01beed702c378f1b72493c7f83d0
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Mon Jan 8 16:32:38 2018 +0200
+
+    added end game butten
+
+commit fbe883db4c2c2493ec828d58b315893a88ac687a
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Mon Jan 8 16:28:55 2018 +0200
+
+    added moves visual
+
+commit 9f3440887e778dac5e3fc822fe5e6d463fd2e6ea
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 8 13:43:29 2018 +0200
+
+    made cells square
+
+commit 4118330685a9254f6bc59c12a28d1a711a11c4a8
+Merge: 473a229 e849c5c
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 8 13:29:18 2018 +0200
+
+    emty commit
+
+commit 473a229d89c36df1142dc34ac8b0d46287a394d9
+Author: LioraZ <liorazr@gmail.com>
+Date:   Mon Jan 8 13:23:47 2018 +0200
+
+    checking
+
+commit e849c5c4fc64cd38305ab21fa597ed5bd018d27e
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Mon Jan 8 13:20:17 2018 +0200
+
+    -
+
+commit d45dade1082849288fbd6be4931cee839a42f0db
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Mon Jan 8 12:11:13 2018 +0200
+
+    latest
+
+commit 36c2d26721068c3875e3f44eeb99fad4490253e2
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Sun Jan 7 20:06:58 2018 +0200
+
+    better understanding of what needs to be done
+
+commit 476616f93a523b8f3f0e79b28a210399662f7d09
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Sun Jan 7 19:12:48 2018 +0200
+
+    many changes to graphics
+
+commit f36deab93af202138a11be3e4c77ce50c0d8bcdb
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Sun Jan 7 14:41:28 2018 +0200
+
+    started app
+
+commit c9c94a2a2dd5de52ba5c7bc7f6b4d1420d2bc86c
+Author: Shani Herskowitz <shanizoe@gmail.com>
+Date:   Sat Jan 6 18:45:20 2018 +0200
+
+    first push

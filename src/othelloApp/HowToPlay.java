@@ -10,17 +10,18 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
  * Defining a HowToPlay screen class.
  */
 public class HowToPlay implements Initializable {
+
+    private final String fileName = "howToPlay";
 
     @FXML
     private Button startGameButton;
@@ -48,7 +49,7 @@ public class HowToPlay implements Initializable {
      * The method reads the game instructions from a documents and prints it to the screen.
      */
     private void getInstruction() {
-        String fileName = "src/othelloApp/howToPlay.txt";
+
         double height = 100;
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
@@ -64,8 +65,33 @@ public class HowToPlay implements Initializable {
                 height += 20;
             }
             bufferedReader.close();
-        } catch (FileNotFoundException ex) { System.out.println("Unable to open how to play");
+        } catch (FileNotFoundException ex) {
+            catchException();
+            getInstruction();
+            System.out.println("Unable to open how to play");
+
         } catch (IOException ex) { System.out.println("Error reading how to play"); }
+    }
+
+    private void catchException() {
+        ArrayList<String> lines = new ArrayList<>();
+        lines.add("Othello is a strategy board game for two players, played on a");
+        lines.add("checkered board. There are sixty-four identical game pieces called");
+        lines.add("disks, which are one color on one side and another color on the");
+        lines.add("other. Players take turns placing disks on the board with their");
+        lines.add("assigned color facing up. During a play, any disks of the opponent's");
+        lines.add("color that are in a straight line and bounded by the disk just placed");
+        lines.add("and another disk of the current player's color are turned over to the");
+        lines.add("current player's color.");
+        lines.add("");
+        lines.add("The object of the game is to have the majority of disks turned to");
+        lines.add("display your color when the last playable empty square is filled.");
+        try {
+            PrintWriter writer = new PrintWriter((fileName), "utf-8");
+            for (String line : lines) { writer.println(line); }
+            writer.close();
+        } catch (FileNotFoundException ex) { System.out.println("Unable to open how to play");
+        } catch (IOException ex) { System.out.println("Error writing to how to play"); }
     }
 
     /**
