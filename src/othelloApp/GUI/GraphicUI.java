@@ -38,7 +38,6 @@ public class GraphicUI implements GameUI {
         for (Move move : movesList) {
             Rectangle rect;
             rect = new Rectangle(cellSize, cellSize, board.getCurrentPlayer().getColor());
-            rect.setOpacity(0.5);
             rect.setX(move.getPoint().getX());
             rect.setY(move.getPoint().getY());
             board.setHalignment(rect, HPos.CENTER);
