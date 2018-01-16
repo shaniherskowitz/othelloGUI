@@ -48,7 +48,7 @@ public class HowToPlay implements Initializable {
      * The method reads the game instructions from a documents and prints it to the screen.
      */
     private void getInstruction() {
-        String fileName = "othelloApp/files/howToPlay.txt";
+        String fileName = "howToPlay.txt";
         double height = 100;
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));

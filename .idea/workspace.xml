@@ -1,80 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="othello:jar4" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/board.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/gameSettings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/BoardGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/GraphicUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/PlayerGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/ScoreGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/tile.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/tile1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/tile2.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/tile3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/tile4.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/HowToPlay.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/MenuController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/OthelloController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/Settings.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/WinScreen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/board.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/game.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/gameSettings" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/howToPlay.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/howToPlay.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/menu.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/othelloPic.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/settings.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/settings.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Board.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/ConsoleGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/ConsoleUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Game.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/GameLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/GameStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/GameUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/HumanPlayer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Move.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Point.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/RegularGameLogic.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloGame/Tile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/sample/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/sample/Main.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/tile.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile1.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/tile1.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile2.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/tile2.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile3.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/tile3.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/tile4.jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/tile4.jpeg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/app.css" afterPath="$PROJECT_DIR$/src/othelloApp/files/app.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/board.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/files/board.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/game.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/files/game.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/gameSettings" afterPath="$PROJECT_DIR$/src/othelloApp/files/gameSettings" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/howToPlay.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/files/howToPlay.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/howToPlay.txt" afterPath="$PROJECT_DIR$/src/othelloApp/files/howToPlay.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/menu.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/files/menu.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/othelloPic.JPG" afterPath="$PROJECT_DIR$/src/othelloApp/pics/othelloPic.JPG" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/settings.css" afterPath="$PROJECT_DIR$/src/othelloApp/files/settings.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/settings.fxml" afterPath="$PROJECT_DIR$/src/othelloApp/files/settings.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/othello_jar3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/othello_jar4.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/files/gameSettings" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/files/howToPlay.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/othello/othelloApp/GUI/download (1).jpeg" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/download (1).jpeg" afterPath="$PROJECT_DIR$/src/othelloApp/pics/download (1).jpeg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/files/gameSettings" afterPath="$PROJECT_DIR$/src/othelloApp/gameSettings" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/othelloApp/files/howToPlay.txt" afterPath="$PROJECT_DIR$/src/othelloApp/howToPlay.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/GUI/BoardGUI.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/GUI/BoardGUI.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/HowToPlay.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/HowToPlay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/Main.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/MenuController.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/MenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/OthelloController.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/OthelloController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/Settings.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/Settings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exe/production/othello/othelloApp/WinScreen.class" afterPath="$PROJECT_DIR$/exe/production/othello/othelloApp/WinScreen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" afterPath="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/HowToPlay.java" afterPath="$PROJECT_DIR$/src/othelloApp/HowToPlay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/Main.java" afterPath="$PROJECT_DIR$/src/othelloApp/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/MenuController.java" afterPath="$PROJECT_DIR$/src/othelloApp/MenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" afterPath="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/Settings.java" afterPath="$PROJECT_DIR$/src/othelloApp/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" afterPath="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -136,18 +83,18 @@
       <file leaf-file-name="Settings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="-2304">
+              <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WinScreen.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WinScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="120">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <marker date="1516097804000" expanded="true" signature="4618:4624" ph="{...}" />
               </folding>
@@ -158,52 +105,35 @@
       <file leaf-file-name="BoardGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="95" column="84" lean-forward="false" selection-start-line="95" selection-start-column="84" selection-end-line="95" selection-end-column="84" />
+            <state relative-caret-position="-225">
+              <caret line="96" column="73" lean-forward="true" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="73" />
               <folding>
-                <element signature="e#4066#4067#0" expanded="true" />
-                <element signature="e#4100#4101#0" expanded="true" />
-                <element signature="e#4220#4221#0" expanded="true" />
-                <element signature="e#4253#4254#0" expanded="true" />
+                <element signature="e#4073#4074#0" expanded="true" />
+                <element signature="e#4107#4108#0" expanded="true" />
+                <element signature="e#4227#4228#0" expanded="true" />
+                <element signature="e#4260#4261#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/othelloApp/files/board.fxml">
+      <file leaf-file-name="PlayerGUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="237">
+              <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="HowToPlay.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HowToPlay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/othelloApp/HowToPlay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="-72">
+              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile3.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/othelloApp/pics/tile3.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile4.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/othelloApp/pics/tile4.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -217,15 +147,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="gameSettings" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/othelloApp/gameSettings">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MenuController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="231">
+              <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
               <folding>
                 <marker date="1516097736000" expanded="true" signature="2515:2521" ph="{...}" />
                 <marker date="1516097736000" expanded="true" signature="2626:2628" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/othelloApp/files/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -308,7 +258,6 @@
         <option value="$PROJECT_DIR$/src/othelloApp/app.css" />
         <option value="$PROJECT_DIR$/src/othelloApp/howToPlay.fxml" />
         <option value="$PROJECT_DIR$/src/othelloApp/howToPlay.txt" />
-        <option value="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/GUI/ScoreGUI.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/classes/HowToPlay.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/classes/OthelloController.java" />
@@ -317,9 +266,10 @@
         <option value="$PROJECT_DIR$/src/othelloApp/classes/MenuController.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/MenuController.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/OthelloController.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/Settings.java" />
         <option value="$PROJECT_DIR$/src/othelloApp/HowToPlay.java" />
-        <option value="$PROJECT_DIR$/src/othelloApp/WinScreen.java" />
+        <option value="$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java" />
       </list>
     </option>
   </component>
@@ -370,24 +320,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othello" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othello" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="othelloGame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -475,6 +407,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="othello" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -496,14 +442,17 @@
     <property name="FullScreen" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="last_opened_file_path" value="$USER_HOME$/2016/Ass7/ass7" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/othelloApp" />
       <recent name="$PROJECT_DIR$/src/othelloApp/pics" />
       <recent name="$PROJECT_DIR$/src/othelloApp/files" />
       <recent name="$PROJECT_DIR$/src/othelloApp/fxml" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -815,6 +764,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
@@ -840,6 +792,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1062,13 +1015,6 @@
       </provider>
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/files/gameSettings">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/files/settings.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -1084,7 +1030,7 @@
     <entry file="file://$USER_HOME$/2016/Ass7/ass7/src/animations/HighScoresAnimation.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/Node.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/javafx-src.zip!/javafx/scene/Scene.java" />
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/download (1).jpeg">
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/pics/download (1).jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1106,14 +1052,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/2016/Assignment4/src/BinaryExpression.java" />
@@ -1164,18 +1102,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/files/howToPlay.txt">
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/howToPlay.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/files/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1240,19 +1170,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="95" column="84" lean-forward="false" selection-start-line="95" selection-start-column="84" selection-end-line="95" selection-end-column="84" />
-          <folding>
-            <element signature="e#4066#4067#0" expanded="true" />
-            <element signature="e#4100#4101#0" expanded="true" />
-            <element signature="e#4220#4221#0" expanded="true" />
-            <element signature="e#4253#4254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/files/board.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1272,17 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <marker date="1516097736000" expanded="true" signature="2515:2521" ph="{...}" />
-            <marker date="1516097736000" expanded="true" signature="2626:2628" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/OthelloController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
@@ -1291,31 +1197,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othelloApp/HowToPlay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othelloApp/WinScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <marker date="1516097804000" expanded="true" signature="4618:4624" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/gameSettings">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2304">
+          <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="69" column="52" lean-forward="true" selection-start-line="69" selection-start-column="52" selection-end-line="69" selection-end-column="52" />
+          <folding>
+            <marker date="1516097736000" expanded="true" signature="2515:2521" ph="{...}" />
+            <marker date="1516097736000" expanded="true" signature="2626:2628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/files/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/BoardGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="96" column="73" lean-forward="true" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="73" />
+          <folding>
+            <element signature="e#4073#4074#0" expanded="true" />
+            <element signature="e#4107#4108#0" expanded="true" />
+            <element signature="e#4227#4228#0" expanded="true" />
+            <element signature="e#4260#4261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/GUI/PlayerGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othelloApp/HowToPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>othello:jar2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>othello</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
