@@ -39,7 +39,7 @@ public class WinScreen {
      */
     private void loadMainMenu(Stage stage) {
         try {
-            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setScene(scene);

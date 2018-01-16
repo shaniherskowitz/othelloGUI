@@ -76,7 +76,7 @@ public class BoardGUI extends GridPane {
      * The method reloads itself from FXML as board GUI.
      */
     private void load() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../board.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../files/board.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         this.draw();
@@ -94,7 +94,7 @@ public class BoardGUI extends GridPane {
         for (int i = 0; i < board.getSize(); i++) {
             for (int j = 0; j < board.getSize(); j++) {
                 Rectangle rect = new Rectangle(tileSize, tileSize, new ImagePattern(
-                        new Image("othelloApp/GUI/tile4.jpeg")));
+                        new Image("othelloApp/pics/tile4.jpeg")));
                 rect.setStroke(Color.WHITE);
                 this.add(rect, j, i);
                 if (board.getBoard()[i][j] == Tile.X) { player1.draw(j, i, tileSize); }

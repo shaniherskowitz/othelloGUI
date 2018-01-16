@@ -38,7 +38,7 @@ public class Settings implements Initializable {
     Rectangle rect2;
 
     private String[] settings = null;
-    private final static String fileName = "othelloApp/gameSettings";
+    private final static String fileName = "othelloApp/files/gameSettings";
 
     /**
      * The Settings default constructor.
@@ -220,7 +220,7 @@ public class Settings implements Initializable {
     protected void loadMainMenu() {
         try {
             Stage stage = (Stage) this.cancelButton.getScene().getWindow();
-            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");

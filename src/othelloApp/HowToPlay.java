@@ -48,7 +48,7 @@ public class HowToPlay implements Initializable {
      * The method reads the game instructions from a documents and prints it to the screen.
      */
     private void getInstruction() {
-        String fileName = "othelloApp/howToPlay.txt";
+        String fileName = "othelloApp/files/howToPlay.txt";
         double height = 100;
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
@@ -75,7 +75,7 @@ public class HowToPlay implements Initializable {
     protected void loadMainMenu() {
         try {
             Stage stage = (Stage) this.mainMenuButton.getScene().getWindow();
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");
@@ -91,7 +91,7 @@ public class HowToPlay implements Initializable {
     protected void startGame() {
         try {
             Stage stage = (Stage) this.startGameButton.getScene().getWindow();
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("board.fxml"));
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("files/board.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Game");

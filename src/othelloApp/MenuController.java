@@ -37,12 +37,12 @@ public class MenuController {
     protected void settings() {
         try {
             Stage stage = getStage(settingsButton);
-            GridPane settingsPage = FXMLLoader.load(getClass().getResource("settings.fxml"));
+            GridPane settingsPage = FXMLLoader.load(getClass().getResource("files/settings.fxml"));
             Scene scene = new Scene(settingsPage, 520, 400);
             scene.getStylesheets().add(getClass().getResource("settings.css").toExternalForm());
             stage.setScene(scene);
             stage.show();
-        } catch (Exception e) { System.out.print("Exception in loading settings fxml"); }
+        } catch (Exception e) { System.out.print("Exception in loading settings files"); }
     }
 
     /**
@@ -52,7 +52,7 @@ public class MenuController {
     protected void startGame() {
         try {
             Stage stage = getStage(startGameButton);
-            AnchorPane root = FXMLLoader.load(getClass().getResource("board.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("files/board.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Game");
@@ -68,7 +68,7 @@ public class MenuController {
     protected void howToPlay() {
         try {
             Stage stage = getStage(howToPlayButton);
-            AnchorPane root = FXMLLoader.load(getClass().getResource("howToPlay.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("files/howToPlay.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("How To Play");

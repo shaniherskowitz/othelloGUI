@@ -110,7 +110,7 @@ public class OthelloController implements Initializable {
     protected void loadMainMenu() {
         try {
             Stage stage = (Stage) mainMenuButton.getScene().getWindow();
-            AnchorPane root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+            AnchorPane root = FXMLLoader.load(getClass().getResource("files/menu.fxml"));
             Scene scene = new Scene(root, 520, 400);
             scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
             stage.setTitle("Othello");

@@ -27,7 +27,7 @@ public class Main extends Application {
         } catch(Exception e) {
             e.printStackTrace();
         }
-        /*GridPane root = (GridPane)FXMLLoader.load(getClass().getResource("sample.fxml"));
+        /*GridPane root = (GridPane)FXMLLoader.load(getClass().getResource("sample.files"));
         primaryStage.setTitle("Othello");
         Label lbl = new Label("Menu:");
         lbl.setFont(new Font("Arial", 30));

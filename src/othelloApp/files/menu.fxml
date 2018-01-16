@@ -34,7 +34,7 @@
       </Button>
       <ImageView fitHeight="135.0" fitWidth="138.0" layoutX="191.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@othelloPic.JPG" />
+            <Image url="@../pics/othelloPic.JPG" />
          </image>
       </ImageView>
    </children>
