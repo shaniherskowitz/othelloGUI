@@ -57,7 +57,7 @@ public class OthelloController implements Initializable {
 
         scoreGUI.setTranslateX(20);
         mainMenuButton.setTranslateX(20);
-        quitButton.setLayoutX(20);
+        quitButton.setTranslateX(20);
         root.getChildren().add(scoreGUI);
         scoreGUI.draw(board.getBoard(), true);
         updateScreenSize(whoStarts);
