@@ -38,7 +38,7 @@ public class Settings implements Initializable {
     Rectangle rect2;
 
     private String[] settings = null;
-    private final static String fileName = "othelloApp/gameSettings";
+    private final static String fileName = "src/othelloApp/gameSettings";
 
     /**
      * The Settings default constructor.
